@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --white: #ffffff;
+    --text: #263348;
+    --muted: #687386;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5faff;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #42c5b5;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #42c5b5;
+}
+
+.nav-button {
+    background: var(--teal);
+    padding: 10px 16px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+}
+
+/* PAGE HERO */
+
+.page-hero {
+    background: linear-gradient(120deg, #101b35, #08766e);
+    color: white;
+    padding: 85px 25px;
+    text-align: center;
+}
+
+.page-hero .label {
+    color: #6de0d1;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin: 15px 0;
+}
+
+.page-hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #e2f4f2;
+    font-size: 15px;
+}
+
+/* GENERAL SECTIONS */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+}
+
+.section-heading span {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 29px;
+    margin-top: 7px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* PROFILE */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.profile-photo {
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.07);
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profile-caption {
+    padding: 15px 8px 8px;
+    text-align: center;
+}
+
+.profile-caption h3 {
+    color: var(--navy);
+    font-size: 18px;
+}
+
+.profile-caption p {
+    color: var(--teal);
+    font-size: 13px;
+}
+
+.biography {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,.04);
+}
+
+.biography h2 {
+    color: var(--navy);
+    margin-bottom: 15px;
+}
+
+.biography p {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* PROFILE HIGHLIGHTS */
+
+.highlights {
+    background: var(--sky);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.highlight-card {
+    background: white;
+    padding: 25px;
+    border-radius: 9px;
+    border-top: 4px solid var(--teal);
+}
+
+.highlight-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.highlight-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* EXPERTISE */
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 17px;
+}
+
+.expertise-item {
+    display: flex;
+    gap: 15px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,.04);
+}
+
+.expertise-icon {
+    min-width: 42px;
+    height: 42px;
+    background: var(--sky);
+    color: var(--dark-teal);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.expertise-item h3 {
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.expertise-item p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* PHILOSOPHY */
+
+.philosophy {
+    background: var(--navy);
+    color: white;
+    padding: 65px 25px;
+    text-align: center;
+}
+
+.philosophy h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.philosophy p {
+    max-width: 800px;
+    margin: auto;
+    color: #dce8f2;
+    font-size: 15px;
+}
+
+.philosophy strong {
+    color: #54d3c3;
+}
+
+/* VALUES */
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.value-card {
+    background: white;
+    text-align: center;
+    padding: 22px 15px;
+    border-radius: 8px;
+    border-bottom: 3px solid var(--teal);
+}
+
+.value-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.value-card p {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 7px;
+}
+
+/* CALL TO ACTION */
+
+.cta {
+    background: var(--sky);
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    color: var(--navy);
+    font-size: 27px;
+}
+
+.cta p {
+    color: var(--muted);
+    margin: 10px auto 22px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 13px 22px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.btn:hover {
+    background: var(--dark-teal);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+}
+
+footer span {
+    color: #42c5b5;
+}
+
+footer a:hover {
+    color: #42c5b5;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-photo {
+        max-width: 450px;
+        margin: auto;
+    }
+
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .highlight-grid,
+    .expertise-grid,
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .profile-photo img {
+        height: 320px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<a href="#home" class="logo">
+<span>●</span> DR. TWAHIRWA JEAN CLAUDE
+</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="Experience.html">Experience</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="consultancy.html">Consultancy</a></li>
+<li><a href="booking.html">Book / Request</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="meet-button" href="booking.html">MEET WITH DR. TWAHIRWA JEAN CLAUDE</a></li>
+</ul>
+
+</nav>
+</header>
+
+
+<!-- PAGE INTRODUCTION -->
+
+<section class="page-hero">
+
+<span class="label">Professional Profile</span>
+
+<h1>About Dr. TWAHIRWA JEAN CLAUDE</h1>
+
+<p>
+Discover his academic profile, professional interests,
+research contributions, educational philosophy and commitment
+to advancing healthcare through research and education.
+</p>
+
+</section>
+
+<!-- BIOGRAPHY -->
+
+<section class="container">
+
+<div class="profile-grid">
+
+<div class="profile-photo">
+
+<img src="jean-claude-1.jpg"
+alt="Dr. TWAHIRWA JEAN CLAUDE"
+onerror="this.src='https://placehold.co/600x750/e8f5f5/101b35?text=Professional+Photo'">
+
+<div class="profile-caption">
+<h3>Dr. TWAHIRWA JEAN CLAUDE</h3>
+<p>Researcher | Nursing Educator | Consultant</p>
+</div>
+
+</div>
+
+<div class="biography">
+
+<h2>Professional Biography</h2>
+
+<p>
+Dr. TWAHIRWA JEAN CLAUDE is an academic professional
+associated with Kibogora Polytechnic, Rwanda. His professional
+interests include nursing education, scientific research,
+healthcare improvement, academic leadership and professional
+development.
+</p>
+
+<p>
+His academic and research interests focus on strengthening
+the relationship between scientific evidence, healthcare
+practice and education. Through research and academic
+engagement, he contributes to discussions addressing healthcare
+challenges and the development of effective, evidence-informed
+approaches to patient care.
+</p>
+
+<p>
+His research interests include palliative care, pain management,
+informal home-based caregiving, nursing practice and public
+health. He is also interested in supporting students and
+emerging researchers in developing research skills and
+communicating scientific findings.
+</p>
+
+<p>
+Through academic collaboration, mentorship and professional
+consultancy, he seeks to contribute to the development of
+knowledge, improvement of healthcare services and advancement
+of nursing education in Rwanda and beyond.
+</p>
+
+<a href="index.html#booking" class="btn">Request a Meeting</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFESSIONAL PROFILE -->
+
+<section class="highlights">
+
+<div class="container">
+
+<div class="section-heading">
+<span>Professional Identity</span>
+<h2>Professional Profile</h2>
+<p>Key dimensions of his academic and professional engagement.</p>
+</div>
+
+<div class="highlight-grid">
+
+<div class="highlight-card">
+<h3>Academic Professional</h3>
+<p>
+Committed to academic excellence, knowledge development
+and the advancement of higher education.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Researcher</h3>
+<p>
+Interested in scientific inquiry, evidence generation,
+research collaboration and scholarly publication.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Nursing Educator</h3>
+<p>
+Interested in nursing education, clinical learning,
+professional competence and student development.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Research Consultant</h3>
+<p>
+Engaged in research methodology, scientific writing,
+academic guidance and research development.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Mentor</h3>
+<p>
+Committed to encouraging students and emerging researchers
+to develop their academic and professional potential.
+</p>
+</div>
+
+<div class="highlight-card">
+<h3>Collaborator</h3>
+<p>
+Values multidisciplinary partnerships that connect
+research, education and practical solutions.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESEARCH INTERESTS -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Scientific Interests</span>
+<h2>Research Interests & Expertise</h2>
+<p>Areas of academic and scientific interest.</p>
+</div>
+
+<div class="expertise-grid">
+
+<div class="expertise-item">
+<div class="expertise-icon">01</div>
+<div>
+<h3>Palliative Care</h3>
+<p>
+Palliative healthcare, home-based care, caregiver support
+and quality of life for patients and families.
+</p>
+</div>
+</div>
+
+<div class="expertise-item">
+<div class="expertise-icon">02</div>
+<div>
+<h3>Nursing Education</h3>
+<p>
+Nursing education, clinical learning, competency development
+and evidence-based nursing practice.
+</p>
+</div>
+</div>
+
+<div class="expertise-item">
+<div class="expertise-icon">03</div>
+<div>
+<h3>Public Health</h3>
+<p>
+Health promotion, disease prevention, community health
+and improvement of healthcare services.
+</p>
+</div>
+</div>
+
+<div class="expertise-item">
+<div class="expertise-icon">04</div>
+<div>
+<h3>Pain Management</h3>
+<p>
+Pain assessment, pain management education and supportive
+care for patients with chronic and life-limiting conditions.
+</p>
+</div>
+</div>
+
+<div class="expertise-item">
+<div class="expertise-icon">05</div>
+<div>
+<h3>Research Methodology</h3>
+<p>
+Scientific research design, literature review, data
+collection, analysis and interpretation.
+</p>
+</div>
+</div>
+
+<div class="expertise-item">
+<div class="expertise-icon">06</div>
+<div>
+<h3>Healthcare Quality Improvement</h3>
+<p>
+Evidence-informed approaches to strengthening patient
+safety, quality of care and healthcare delivery.
+</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- EDUCATIONAL PHILOSOPHY -->
+
+<section class="philosophy">
+
+<h2>Educational & Professional Philosophy</h2>
+
+<p>
+Academic excellence requires more than the transmission
+of knowledge. It requires critical thinking, scientific
+inquiry, professional integrity and the responsible
+application of evidence to real-world challenges.
+<br><br>
+<strong>Science, faith and conscience.</strong>
+<br>
+A commitment to knowledge, ethical responsibility and
+service to humanity.
+</p>
+
+</section>
+
+<!-- PROFESSIONAL VALUES -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Core Principles</span>
+<h2>Professional Values</h2>
+<p>Principles that guide academic and professional engagement.</p>
+</div>
+
+<div class="values-grid">
+
+<div class="value-card">
+<h3>Integrity</h3>
+<p>Upholding honesty and ethical responsibility.</p>
+</div>
+
+<div class="value-card">
+<h3>Excellence</h3>
+<p>Striving for quality in research and education.</p>
+</div>
+
+<div class="value-card">
+<h3>Innovation</h3>
+<p>Encouraging new ideas and practical solutions.</p>
+</div>
+
+<div class="value-card">
+<h3>Collaboration</h3>
+<p>Building partnerships and sharing knowledge.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+<h2>Connect, Collaborate & Learn</h2>
+
+<p>
+For academic collaboration, research consultancy,
+professional mentorship or speaking engagements,
+get in touch.
+</p>
+
+<a href="index.html#booking" class="btn">Book a Meeting</a>
+
+<a href="index.html#contact" class="btn">Contact</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>DR. TWAHIRWA JEAN CLAUDE</h3>
+
+<p>Research • Education • Consultancy • Leadership</p>
+
+<p>
+Email:
+<a href="mailto:twahirwajeanclaude1@gmail.com">
+twahirwajeanclaude1@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://wa.me/250784810644" target="_blank">WhatsApp</a>
+|
+<a href="https://web.facebook.com/profile.php?id=100081601130015"
+target="_blank">Facebook</a>
+|
+<a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+target="_blank">LinkedIn</a>
+</p>
+
+<p>© <span id="year"></span> All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

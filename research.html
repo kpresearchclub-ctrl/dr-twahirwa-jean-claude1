@@ -1,0 +1,1251 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Research & Publications | Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --white: #ffffff;
+    --text: #263348;
+    --muted: #687386;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5faff;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVIGATION */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logo span { color: #42c5b5; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #42c5b5;
+}
+
+.nav-button {
+    background: var(--teal);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.page-hero {
+    background: linear-gradient(120deg, #101b35, #08766e);
+    color: white;
+    text-align: center;
+    padding: 85px 25px;
+}
+
+.page-hero span {
+    color: #6de0d1;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 15px 0;
+}
+
+.page-hero p {
+    max-width: 760px;
+    margin: auto;
+    color: #e2f4f2;
+    font-size: 15px;
+}
+
+/* GENERAL SECTIONS */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.section-heading {
+    margin-bottom: 28px;
+}
+
+.section-heading span {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 28px;
+    margin-top: 7px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* INTRODUCTION */
+
+.intro-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid var(--teal);
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.intro-card h2 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.intro-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* RESEARCH INTERESTS */
+
+.interest-section {
+    background: var(--sky);
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.interest-card {
+    background: white;
+    padding: 23px;
+    border-radius: 8px;
+    border-top: 4px solid var(--teal);
+}
+
+.interest-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.interest-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* PUBLICATION LIBRARY */
+
+.publication-tools {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.publication-tools input,
+.publication-tools select {
+    padding: 13px 15px;
+    border: 1px solid #d6e0e8;
+    border-radius: 6px;
+    background: white;
+    color: var(--text);
+    font-size: 14px;
+    outline: none;
+}
+
+.publication-tools input {
+    flex: 1;
+    min-width: 230px;
+}
+
+.publication-tools input:focus,
+.publication-tools select:focus {
+    border-color: var(--teal);
+}
+
+.results-count {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.publication-list {
+    display: grid;
+    gap: 18px;
+}
+
+.publication-card {
+    background: white;
+    padding: 25px;
+    border-radius: 9px;
+    border-left: 4px solid var(--teal);
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.publication-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.publication-meta {
+    color: var(--muted);
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.publication-card p {
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.publication-type {
+    display: inline-block;
+    background: var(--sky);
+    color: var(--dark-teal);
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.publication-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.publication-links a {
+    color: var(--dark-teal);
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.publication-links a:hover {
+    text-decoration: underline;
+}
+
+.no-results {
+    display: none;
+    background: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+/* RESEARCH PROJECTS */
+
+.project-section {
+    background: var(--sky);
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.project-card {
+    background: white;
+    padding: 25px;
+    border-radius: 9px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.project-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* RESEARCH CONTRIBUTIONS */
+
+.contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.contribution-card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border-top: 4px solid var(--teal);
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.contribution-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.contribution-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ORCID */
+
+.orcid-section {
+    background: var(--navy);
+    color: white;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.orcid-section h2 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.orcid-section p {
+    max-width: 700px;
+    margin: auto;
+    color: #dce8f2;
+    font-size: 14px;
+}
+
+.orcid-button {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--teal);
+    color: white;
+    padding: 12px 22px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--sky);
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    color: var(--navy);
+    font-size: 27px;
+}
+
+.cta p {
+    color: var(--muted);
+    margin: 10px auto 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px;
+}
+
+.btn:hover {
+    background: var(--dark-teal);
+}
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+}
+
+footer span { color: #42c5b5; }
+
+footer a:hover { color: #42c5b5; }
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav-links.show { display: flex; }
+
+    .interest-grid,
+    .contribution-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .interest-grid,
+    .project-grid,
+    .contribution-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero { padding: 60px 20px; }
+
+    .section-heading h2 { font-size: 24px; }
+
+    .publication-card { padding: 20px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+<span>●</span> DR. TWAHIRWA JEAN CLAUDE
+</a>
+
+<button class="menu-toggle" id="menuToggle"
+aria-label="Toggle navigation">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="Experience.html">Experience</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="consultancy.html">Consultancy</a></li>
+<li><a href="booking.html">Book / Request</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="meet-button" href="booking.html">MEET WITH DR. TWAHIRWA JEAN CLAUDE</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<span>Research & Scholarship</span>
+
+<h1>Research, Publications & Innovation</h1>
+
+<p>
+Explore research publications, scholarly contributions,
+research interests and academic work associated with
+Dr. TWAHIRWA JEAN CLAUDE.
+</p>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="container">
+
+<div class="intro-card">
+
+<h2>Research Profile</h2>
+
+<p>
+Research is an essential part of evidence-based healthcare,
+scientific knowledge development and academic advancement.
+This research portfolio presents selected publications,
+scholarly contributions and areas of research interest.
+</p>
+
+<p style="margin-top:12px;">
+The publication records below include journal articles,
+a dissertation and other scholarly work. Authorship,
+publication details and indexing information should be
+checked against the original publisher records before
+the website is officially published.
+</p>
+
+</div>
+
+</section>
+
+<!-- RESEARCH INTERESTS -->
+
+<section class="interest-section">
+
+<div class="container">
+
+<div class="section-heading">
+<span>Areas of Scholarship</span>
+<h2>Research Interests</h2>
+<p>
+Key subject areas represented in the research portfolio.
+</p>
+</div>
+
+<div class="interest-grid">
+
+<div class="interest-card">
+<h3>Palliative Care</h3>
+<p>
+Home-based palliative care, caregiver experiences,
+support systems and quality of life.
+</p>
+</div>
+
+<div class="interest-card">
+<h3>Nursing Education</h3>
+<p>
+Nursing education, clinical learning, student development
+and professional competencies.
+</p>
+</div>
+
+<div class="interest-card">
+<h3>Public Health</h3>
+<p>
+Community health, disease prevention and healthcare
+service utilization.
+</p>
+</div>
+
+<div class="interest-card">
+<h3>Chronic Disease Management</h3>
+<p>
+Diabetes, hypertension, treatment adherence and
+non-communicable disease services.
+</p>
+</div>
+
+<div class="interest-card">
+<h3>Pain Management</h3>
+<p>
+Cancer-related pain, caregiver knowledge and
+supportive healthcare practices.
+</p>
+</div>
+
+<div class="interest-card">
+<h3>Health Systems & Quality</h3>
+<p>
+Healthcare delivery, patient support, service quality
+and evidence-informed policy.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PUBLICATIONS -->
+
+<section class="container" id="publications">
+
+<div class="section-heading">
+<span>Scholarly Output</span>
+<h2>Research Publications</h2>
+<p>
+Search the publication library by title, year, journal
+or research topic.
+</p>
+</div>
+
+<div class="publication-tools">
+
+<input
+type="search"
+id="searchInput"
+placeholder="Search publications, topics, journals or DOI..."
+aria-label="Search publications">
+
+<select id="yearFilter" aria-label="Filter by year">
+<option value="all">All years</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+</select>
+
+<select id="typeFilter" aria-label="Filter by publication type">
+<option value="all">All publication types</option>
+<option value="article">Journal article</option>
+<option value="review">Review article</option>
+<option value="dissertation">Dissertation</option>
+</select>
+
+</div>
+
+<p class="results-count" id="resultsCount"></p>
+
+<div class="publication-list" id="publicationList">
+
+<!-- PUBLICATION 1 -->
+
+<article class="publication-card"
+data-year="2025"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Palliative care conditions managed at home and self-reported
+challenges experienced by informal home-based caregivers
+in Rwanda: A qualitative study
+</h3>
+
+<div class="publication-meta">
+2025 | BMC Palliative Care | Volume 24, Article 267
+</div>
+
+<p>
+A qualitative study exploring palliative care conditions
+managed at home and the experiences and challenges of
+informal home-based caregivers in Rwanda.
+</p>
+
+<p><strong>DOI:</strong> 10.1186/s12904-025-01905-0</p>
+
+<div class="publication-links">
+<a href="https://doi.org/10.1186/s12904-025-01905-0"
+target="_blank" rel="noopener noreferrer">View Article →</a>
+
+<a href="https://pubmed.ncbi.nlm.nih.gov/41131522/"
+target="_blank" rel="noopener noreferrer">PubMed →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 2 -->
+
+<article class="publication-card"
+data-year="2026"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Exploring Satisfaction and Support Needs of Informal
+Home Caregivers Using Palliative Care Services:
+A Mixed-Methods Study from Rwanda
+</h3>
+
+<div class="publication-meta">
+2026 | Rwanda Journal of Medicine and Health Sciences |
+Volume 9, Issue 1, Pages 62–83
+</div>
+
+<p>
+A mixed-methods study examining the satisfaction,
+support needs and experiences of informal home-based
+caregivers using palliative care services in Rwanda.
+</p>
+
+<p><strong>DOI:</strong> 10.4314/rjmhs.v9i1.5</p>
+
+<div class="publication-links">
+<a href="https://doi.org/10.4314/rjmhs.v9i1.5"
+target="_blank" rel="noopener noreferrer">View Article →</a>
+
+<a href="https://pubmed.ncbi.nlm.nih.gov/42131389/"
+target="_blank" rel="noopener noreferrer">PubMed →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 3 -->
+
+<article class="publication-card"
+data-year="2026"
+data-type="review">
+
+<span class="publication-type">Review Article</span>
+
+<h3>
+Mapping Existing Informal Home Caregiver Support
+Guidelines for Palliative Care: A Scoping Review
+</h3>
+
+<div class="publication-meta">
+2026 | Rwanda Journal of Medicine and Health Sciences |
+Volume 9, Issue 1, Pages 224–246
+</div>
+
+<p>
+A scoping review examining existing guidelines for
+supporting informal home-based caregivers of patients
+receiving palliative care.
+</p>
+
+<p><strong>DOI:</strong> 10.4314/rjmhs.v9i1.17</p>
+
+<div class="publication-links">
+<a href="https://doi.org/10.4314/rjmhs.v9i1.17"
+target="_blank" rel="noopener noreferrer">View Article →</a>
+
+<a href="https://rjmhs.ur.ac.rw/IMG/pdf/17._224-246_jean_claude_twahirwa.pdf"
+target="_blank" rel="noopener noreferrer">Read PDF →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 4 -->
+
+<article class="publication-card"
+data-year="2024"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Knowledge and Home Caregiver's Experiences of Palliative
+Health Care Team Support in Pain Management of Cancer
+Patients in Rwanda
+</h3>
+
+<div class="publication-meta">
+2024 | American Journal of Cancer Prevention
+</div>
+
+<p>
+Research concerning caregiver knowledge and experiences
+of support from palliative healthcare teams in cancer
+pain management.
+</p>
+
+<p><strong>DOI:</strong> 10.12691/ajcp-11-1-3</p>
+
+<div class="publication-links">
+<a href="https://doi.org/10.12691/ajcp-11-1-3"
+target="_blank" rel="noopener noreferrer">View Article →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 5 -->
+
+<article class="publication-card"
+data-year="2019"
+data-type="dissertation">
+
+<span class="publication-type">Master's Dissertation</span>
+
+<h3>
+Knowledge and Home Caregivers Experiences from Palliative
+Health Care Team Education in Pain Management of Cancer
+Patients in Rwanda
+</h3>
+
+<div class="publication-meta">
+2019 | University of Rwanda
+</div>
+
+<p>
+A master's research dissertation addressing caregiver
+knowledge and experiences of palliative healthcare team
+education in cancer pain management in Rwanda.
+</p>
+
+<div class="publication-links">
+<a href="http://dr.ur.ac.rw/handle/123456789/2095"
+target="_blank" rel="noopener noreferrer">View Dissertation Record →</a>
+
+<a href="https://dr.ur.ac.rw/bitstream/handle/123456789/2095/4.%202019.-Twahirwa%20Jean%20Claude.pdf?isAllowed=y&sequence=1"
+target="_blank" rel="noopener noreferrer">Read Dissertation PDF →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 6 -->
+
+<article class="publication-card"
+data-year="2024"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Adherence to Treatment and Associated Factors Among
+Patients with Type 2 Diabetes Mellitus Attending
+Non-Communicable Disease Services in Rwanda:
+A Cross-Sectional Study
+</h3>
+
+<div class="publication-meta">
+2024 | Kibogora Polytechnic Scientific Journal |
+Volume 1, Pages 39–51
+</div>
+
+<p>
+A cross-sectional study investigating treatment
+adherence and associated factors among patients
+with type 2 diabetes mellitus in Rwanda.
+</p>
+
+<p><strong>DOI:</strong> 10.33618/KPSJ.2024.01.004</p>
+
+<div class="publication-links">
+<a href="https://doi.org/10.33618/KPSJ.2024.01.004"
+target="_blank" rel="noopener noreferrer">View Article →</a>
+
+<a href="https://journal.kp.ac.rw/index.php/kp/article/view/65"
+target="_blank" rel="noopener noreferrer">Journal Record →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 7 -->
+
+<article class="publication-card"
+data-year="2024"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Factors Associated with the Utilization of Immediate
+Postpartum Family Planning Among Women Attending
+Kibogora Health Center, Nyamasheke District, Rwanda
+</h3>
+
+<div class="publication-meta">
+2024 | Kibogora Polytechnic Scientific Journal
+</div>
+
+<p>
+Research addressing factors associated with the
+utilization of immediate postpartum family planning
+services in Nyamasheke District.
+</p>
+
+<div class="publication-links">
+<a href="https://www.journal.kp.ac.rw/index.php/kp/article/view/7"
+target="_blank" rel="noopener noreferrer">View Journal Record →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 8 -->
+
+<article class="publication-card"
+data-year="2018"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Prevalence of Hypertension and Factors Associated with
+Screening Uptake in Kanjongo, Nyamasheke District, Rwanda
+</h3>
+
+<div class="publication-meta">
+2018 | Kibogora Polytechnic Scientific Journal
+</div>
+
+<p>
+Research on hypertension prevalence and factors
+associated with screening uptake in Kanjongo,
+Nyamasheke District.
+</p>
+
+<div class="publication-links">
+<a href="https://www.journal.kp.ac.rw/index.php/kp/article/view/19"
+target="_blank" rel="noopener noreferrer">View Journal Record →</a>
+</div>
+
+</article>
+
+<!-- PUBLICATION 9 -->
+
+<article class="publication-card"
+data-year="2018"
+data-type="article">
+
+<span class="publication-type">Journal Article</span>
+
+<h3>
+Prevalence of Diabetes Mellitus and Factors Associated
+with Screening Uptake in Kanjongo, Nyamasheke District,
+Rwanda
+</h3>
+
+<div class="publication-meta">
+2018 | Kibogora Polytechnic Scientific Journal
+</div>
+
+<p>
+Research examining diabetes mellitus prevalence
+and factors associated with screening uptake
+in Kanjongo, Nyamasheke District.
+</p>
+
+<div class="publication-links">
+<a href="https://www.journal.kp.ac.rw/index.php/kp/article/view/18"
+target="_blank" rel="noopener noreferrer">View Journal Record →</a>
+</div>
+
+</article>
+
+</div>
+
+<div class="no-results" id="noResults">
+<h3>No publications found</h3>
+<p>Try another title, keyword, year or publication type.</p>
+</div>
+
+</section>
+
+<!-- RESEARCH PROJECTS -->
+
+<section class="project-section">
+
+<div class="container">
+
+<div class="section-heading">
+<span>Research Development</span>
+<h2>Research Themes & Projects</h2>
+<p>
+Areas for scholarly investigation and collaborative research.
+</p>
+</div>
+
+<div class="project-grid">
+
+<div class="project-card">
+<h3>Home-Based Palliative Care</h3>
+<p>
+Research on informal caregivers, home-based care,
+patient support, symptom management and palliative
+healthcare services in Rwanda.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Caregiver Support & Education</h3>
+<p>
+Exploring caregiver training, knowledge development,
+support systems and the role of healthcare teams
+in improving home-based care.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Non-Communicable Diseases</h3>
+<p>
+Research on diabetes, hypertension, treatment adherence
+and community-based disease screening.
+</p>
+</div>
+
+<div class="project-card">
+<h3>Nursing Education & Quality</h3>
+<p>
+Research interests in nursing education, clinical
+learning, healthcare quality and evidence-based practice.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- RESEARCH CONTRIBUTIONS -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Academic Engagement</span>
+<h2>Research & Scholarly Contributions</h2>
+<p>
+Areas of engagement in scientific and academic work.
+</p>
+</div>
+
+<div class="contribution-grid">
+
+<div class="contribution-card">
+<h3>Scientific Writing</h3>
+<p>
+Development and dissemination of scholarly research
+through academic publications.
+</p>
+</div>
+
+<div class="contribution-card">
+<h3>Research Collaboration</h3>
+<p>
+Engagement in multidisciplinary research and
+academic partnerships.
+</p>
+</div>
+
+<div class="contribution-card">
+<h3>Evidence-Based Practice</h3>
+<p>
+Promoting the use of research evidence to inform
+healthcare practice and decision-making.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ORCID -->
+
+<section class="orcid-section">
+
+<h2>Researcher Identification</h2>
+
+<p>
+Connect to the researcher's ORCID profile to explore
+his scholarly identity and associated research records.
+</p>
+
+<a class="orcid-button"
+href="https://orcid.org/0009-0007-0537-7885"
+target="_blank" rel="noopener noreferrer">
+View ORCID Profile →
+</a>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Research Collaboration & Academic Partnerships</h2>
+
+<p>
+For research collaboration, scientific writing,
+academic mentorship and research consultancy,
+please get in touch.
+</p>
+
+<a href="index.html#booking" class="btn">Book a Meeting</a>
+
+<a href="index.html#contact" class="btn">Contact</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>DR. TWAHIRWA JEAN CLAUDE</h3>
+
+    <strong>DR. TWAHIRWA JEAN CLAUDE</strong>
+
+    <p>Academic | Researcher | Nursing Educator | Professional Collaborator</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html">Book / Request</a>
+    </div>
+
+
+<p>
+Email:
+<a href="mailto:twahirwajeanclaude1@gmail.com">
+twahirwajeanclaude1@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://wa.me/250784810644"
+target="_blank" rel="noopener noreferrer">WhatsApp</a>
+|
+<a href="https://web.facebook.com/profile.php?id=100081601130015"
+target="_blank" rel="noopener noreferrer">Facebook</a>
+|
+<a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</p>
+
+<p>© <span id="year"></span> All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+    });
+});
+
+/* PUBLICATION SEARCH AND FILTER */
+
+const searchInput = document.getElementById("searchInput");
+const yearFilter = document.getElementById("yearFilter");
+const typeFilter = document.getElementById("typeFilter");
+
+const publicationCards = Array.from(
+    document.querySelectorAll(".publication-card")
+);
+
+const resultsCount = document.getElementById("resultsCount");
+const noResults = document.getElementById("noResults");
+
+function filterPublications() {
+
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const selectedYear = yearFilter.value;
+    const selectedType = typeFilter.value;
+
+    let visibleCount = 0;
+
+    publicationCards.forEach(card => {
+
+        const text = card.textContent.toLowerCase();
+        const year = card.dataset.year;
+        const type = card.dataset.type;
+
+        const matchesSearch = text.includes(searchTerm);
+        const matchesYear =
+            selectedYear === "all" || year === selectedYear;
+        const matchesType =
+            selectedType === "all" || type === selectedType;
+
+        const isVisible =
+            matchesSearch && matchesYear && matchesType;
+
+        card.style.display = isVisible ? "block" : "none";
+
+        if (isVisible) visibleCount++;
+
+    });
+
+    resultsCount.textContent =
+        "Showing " + visibleCount + " of " +
+        publicationCards.length + " publication records.";
+
+    noResults.style.display =
+        visibleCount === 0 ? "block" : "none";
+}
+
+searchInput.addEventListener("input", filterPublications);
+yearFilter.addEventListener("change", filterPublications);
+typeFilter.addEventListener("change", filterPublications);
+
+filterPublications();
+
+/* FOOTER YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

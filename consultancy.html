@@ -1,0 +1,1017 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultancy & Professional Services | Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --background: #f5faff;
+    --white: #ffffff;
+    --text: #344054;
+    --muted: #667085;
+    --border: #dce7ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(16, 27, 53, 0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 17px;
+}
+
+.logo span {
+    display: block;
+    color: var(--teal);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--navy);
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--teal);
+}
+
+.nav-links .booking-link {
+    background: var(--teal);
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.nav-links .booking-link:hover {
+    background: var(--dark-teal);
+    color: white;
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--navy);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.hero {
+    background: linear-gradient(120deg, #101b35, #08766e);
+    color: white;
+    padding: 95px 5%;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.hero .eyebrow {
+    color: #a7e7df;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.hero p {
+    max-width: 720px;
+    margin: auto;
+    color: #e2f3f1;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 23px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: white;
+    color: var(--navy);
+}
+
+.btn-primary:hover {
+    background: var(--sky);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--navy);
+}
+
+.section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading .tag {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    max-width: 720px;
+    margin: auto;
+    color: var(--muted);
+}
+
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    font-size: 16px;
+}
+
+.intro strong {
+    color: var(--navy);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    background: white;
+    padding: 28px 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+    box-shadow: 0 5px 18px rgba(16, 27, 53, 0.04);
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--teal);
+    box-shadow: 0 12px 25px rgba(16, 27, 53, 0.09);
+}
+
+.service-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: var(--sky);
+    color: var(--dark-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: var(--navy);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.expertise {
+    background: var(--sky);
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.expertise-item {
+    background: white;
+    padding: 22px;
+    border-radius: 9px;
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.check {
+    color: var(--teal);
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.expertise-item h3 {
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.expertise-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.approach-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.approach-card {
+    padding: 25px;
+    background: white;
+    border-radius: 10px;
+    border-top: 4px solid var(--teal);
+}
+
+.approach-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.approach-card p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.enquiry-section {
+    background: var(--navy);
+    padding: 75px 0;
+}
+
+.enquiry-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.enquiry-info {
+    color: white;
+}
+
+.enquiry-info h2 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 10px 0 18px;
+}
+
+.enquiry-info p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.contact-detail {
+    margin: 18px 0;
+    color: #e2e8f0;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail strong {
+    color: #a7e7df;
+    display: block;
+}
+
+.contact-detail a:hover {
+    color: #a7e7df;
+}
+
+.enquiry-form {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.enquiry-form h3 {
+    color: var(--navy);
+    margin-bottom: 22px;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(22, 141, 131, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--teal);
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background: var(--dark-teal);
+}
+
+.form-note {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+footer {
+    background: #0a1328;
+    color: #cbd5e1;
+    padding: 35px 5%;
+    text-align: center;
+}
+
+footer strong {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #a7e7df;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+@media(max-width: 950px) {
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        width: 100%;
+        padding: 7px 0;
+    }
+
+    .nav-links .booking-link {
+        width: fit-content;
+        padding: 10px 16px;
+    }
+
+    .services-grid,
+    .approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .enquiry-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 550px) {
+    .hero {
+        padding: 70px 5%;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+    .services-grid,
+    .expertise-grid,
+    .approach-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .enquiry-form {
+        padding: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            DR. TWAHIRWA JEAN CLAUDE
+            <span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu">
+            ☰
+        </button>
+
+                <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="research.html">Research</a>
+            <a href="consultancy.html">Consultancy</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="booking.html" class="booking-link">Book / Request</a>
+        </div>
+        
+
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">Professional Services</span>
+        <h1>Consultancy & Professional Services</h1>
+        <p>
+            Supporting research, education, healthcare improvement and
+            professional development through evidence-informed knowledge,
+            collaboration and practical solutions.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">Explore Services</a>
+            <a href="#enquiry" class="btn btn-outline">Make an Enquiry</a>
+        </div>
+    </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">Professional Engagement</span>
+            <h2>Knowledge Into Practical Solutions</h2>
+        </div>
+
+        <div class="intro">
+            <p>
+                Consultancy is an opportunity to connect academic knowledge
+                with real-world challenges. This section presents areas in
+                which <strong>Dr. TWAHIRWA JEAN CLAUDE</strong> may provide
+                professional engagement, collaboration and technical support
+                based on his verified qualifications and experience.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services" style="background:#ffffff;">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">Areas of Service</span>
+            <h2>Consultancy Services</h2>
+            <p>
+                Explore the proposed areas of professional support and
+                collaboration.
+            </p>
+        </div>
+
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-icon">🔬</div>
+                <h3>Research Methodology</h3>
+                <p>
+                    Guidance on research questions, study designs,
+                    methodologies, research protocols and ethical
+                    considerations.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Data Analysis & Interpretation</h3>
+                <p>
+                    Support in organizing research data, interpreting
+                    findings and presenting evidence for academic
+                    and professional use.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Scientific Writing</h3>
+                <p>
+                    Academic writing guidance, manuscript development,
+                    literature reviews and preparation of research
+                    reports.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Nursing & Health Education</h3>
+                <p>
+                    Educational support, curriculum-related discussions,
+                    learning resources and professional development
+                    in nursing and healthcare.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🏥</div>
+                <h3>Healthcare Quality Improvement</h3>
+                <p>
+                    Evidence-informed approaches to healthcare quality,
+                    patient safety, service improvement and health
+                    systems strengthening.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">👥</div>
+                <h3>Training & Capacity Building</h3>
+                <p>
+                    Academic and professional learning activities,
+                    workshops, mentorship and knowledge-sharing
+                    opportunities.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- AREAS OF EXPERTISE -->
+<section class="section expertise">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">Professional Focus</span>
+            <h2>Areas of Interest</h2>
+            <p>
+                Key academic and professional themes relevant to
+                consultancy and collaboration.
+            </p>
+        </div>
+
+        <div class="expertise-grid">
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Palliative Care</h3>
+                    <p>
+                        Supportive care, caregiver experiences and
+                        improving the quality of life of patients.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Nursing Education</h3>
+                    <p>
+                        Teaching, learning, clinical skills development
+                        and professional education.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Public Health</h3>
+                    <p>
+                        Population health, disease prevention and
+                        community-based health interventions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Chronic Disease Management</h3>
+                    <p>
+                        Continuity of care, treatment adherence and
+                        patient-centred healthcare services.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Pain Management</h3>
+                    <p>
+                        Pain assessment, management approaches and
+                        caregiver education.
+                    </p>
+                </div>
+            </div>
+
+            <div class="expertise-item">
+                <span class="check">✓</span>
+                <div>
+                    <h3>Health Systems & Quality</h3>
+                    <p>
+                        Healthcare service delivery, quality improvement
+                        and evidence-informed practice.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- APPROACH -->
+<section class="section">
+    <div class="container">
+        <div class="section-heading">
+            <span class="tag">Working Together</span>
+            <h2>Our Approach to Collaboration</h2>
+            <p>
+                A structured approach to understanding needs and
+                developing appropriate professional support.
+            </p>
+        </div>
+
+        <div class="approach-grid">
+
+            <div class="approach-card">
+                <h3>01. Understand</h3>
+                <p>
+                    Discuss the client's objectives, challenges,
+                    expectations and required outcomes.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <h3>02. Develop</h3>
+                <p>
+                    Identify appropriate approaches and develop a
+                    suitable plan based on the scope of the request.
+                </p>
+            </div>
+
+            <div class="approach-card">
+                <h3>03. Collaborate</h3>
+                <p>
+                    Work collaboratively towards practical,
+                    evidence-informed and measurable outcomes.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ENQUIRY -->
+<section class="enquiry-section" id="enquiry">
+    <div class="container">
+        <div class="enquiry-layout">
+
+            <div class="enquiry-info">
+                <span style="color:#a7e7df; letter-spacing:2px; font-size:12px; font-weight:bold;">
+                    START A CONVERSATION
+                </span>
+
+                <h2>Discuss Your Consultancy Needs</h2>
+
+                <p>
+                    Whether you are an institution, researcher, healthcare
+                    professional, student or organization, you can submit
+                    an enquiry to discuss a potential collaboration.
+                </p>
+
+                <div class="contact-detail">
+                    <strong>Email</strong>
+                    <a href="mailto:twahirwajeanclaude1@gmail.com">
+                        twahirwajeanclaude1@gmail.com
+                    </a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>WhatsApp</strong>
+                    <a href="https://wa.me/250784810644" target="_blank">
+                        +250 784 810 644
+                    </a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>LinkedIn</strong>
+                    <a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+                       target="_blank">
+                        View LinkedIn Profile
+                    </a>
+                </div>
+
+                <div class="contact-detail">
+                    <strong>Facebook</strong>
+                    <a href="https://web.facebook.com/profile.php?id=100081601130015"
+                       target="_blank">
+                        View Facebook Profile
+                    </a>
+                </div>
+            </div>
+
+            <form class="enquiry-form" id="consultancyForm">
+                <h3>Consultancy Enquiry Form</h3>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Institution / Organization</label>
+                    <input type="text" id="organization" name="organization"
+                           placeholder="Enter institution or organization">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Service Required *</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a service</option>
+                        <option>Research Methodology</option>
+                        <option>Data Analysis & Interpretation</option>
+                        <option>Scientific Writing</option>
+                        <option>Nursing & Health Education</option>
+                        <option>Healthcare Quality Improvement</option>
+                        <option>Training & Capacity Building</option>
+                        <option>Other Consultancy</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Describe Your Request *</label>
+                    <textarea id="message" name="message"
+                              placeholder="Briefly explain the support you need..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Send Consultancy Enquiry →
+                </button>
+
+                <p class="form-note">
+                    Submitting opens your email application with the
+                    enquiry details prepared for review and sending.
+                </p>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <strong>DR. TWAHIRWA JEAN CLAUDE</strong>
+
+    <p>Academic | Researcher | Nursing Educator | Professional Collaborator</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html">Book / Request</a>
+    </div>
+
+    <p>
+        © <span id="year"></span> Dr. TWAHIRWA JEAN CLAUDE.
+        All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function () {
+    navLinks.classList.toggle("show");
+
+    menuToggle.textContent =
+        navLinks.classList.contains("show") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", function () {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* COPYRIGHT YEAR */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* CONSULTANCY ENQUIRY */
+document.getElementById("consultancyForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const organization = document.getElementById("organization").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !service || !message) {
+        alert("Please complete all required fields.");
+        return;
+    }
+
+    const subject = encodeURIComponent(
+        "Consultancy Enquiry - " + service
+    );
+
+    const body = encodeURIComponent(
+        "CONSULTANCY ENQUIRY\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Institution / Organization: " + organization + "\n" +
+        "Service Required: " + service + "\n\n" +
+        "Request Details:\n" + message
+    );
+
+    const mailtoLink =
+        "mailto:twahirwajeanclaude1@gmail.com" +
+        "?subject=" + subject +
+        "&body=" + body;
+
+    window.location.href = mailtoLink;
+});
+</script>
+
+</body>
+</html>

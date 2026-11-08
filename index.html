@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Meet Dr. TWAHIRWA JEAN CLAUDE – researcher, nursing educator and research consultant in Rwanda.">
+<title>Meet Dr. TWAHIRWA JEAN CLAUDE | Academic Portfolio</title>
+
+<style>
+:root{
+--navy:#101b35;
+--teal:#168d83;
+--dark-teal:#08766e;
+--sky:#e8f5f5;
+--white:#fff;
+--text:#263348;
+--muted:#687386;
+--border:#e5eaf0;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Arial,Helvetica,sans-serif;background:#f7f9fc;color:var(--text);line-height:1.65}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+
+header{background:var(--navy);color:white;position:sticky;top:0;z-index:1000}
+.navbar{max-width:1300px;margin:auto;padding:15px 25px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.logo{font-weight:bold;font-size:17px;white-space:nowrap}
+.logo span{color:#35c2b3}
+.nav-links{display:flex;align-items:center;gap:18px;list-style:none}
+.nav-links a{font-size:13px;color:#fff;transition:.3s}
+.nav-links a:hover{color:#48d0c0}
+.meet-button{background:var(--teal);color:white!important;padding:11px 18px;border-radius:5px;font-weight:bold;white-space:nowrap}
+.menu-toggle{display:none;background:none;border:none;color:white;font-size:26px}
+
+.hero{max-width:1300px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;background:white;min-height:510px}
+.hero-content{padding:65px 55px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{color:var(--teal);font-weight:bold;font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-bottom:15px}
+.hero h1{color:var(--navy);font-size:clamp(30px,4vw,46px);line-height:1.2;margin-bottom:18px}
+.hero h2{color:var(--dark-teal);font-size:22px;margin-bottom:12px}
+.hero-content p{font-size:14px;color:var(--muted);margin-bottom:25px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 21px;border-radius:5px;font-size:13px;font-weight:bold;border:1px solid var(--teal)}
+.btn-primary{background:var(--teal);color:white}
+.btn-outline{color:var(--navy);border-color:var(--navy)}
+.btn:hover{opacity:.86}
+
+.gallery{position:relative;min-height:510px;background:#dce9e9;overflow:hidden}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s}
+.slide.active{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover}
+.gallery-caption{position:absolute;bottom:0;left:0;right:0;padding:45px 25px 25px;background:linear-gradient(transparent,rgba(0,0,0,.7));color:white;z-index:5}
+.gallery-controls{position:absolute;top:50%;left:0;right:0;display:flex;justify-content:space-between;padding:15px;transform:translateY(-50%);z-index:10}
+.gallery-controls button{width:40px;height:40px;border:none;border-radius:50%;background:rgba(16,27,53,.8);color:white;font-size:24px}
+.dots{position:absolute;bottom:12px;right:20px;z-index:10;display:flex;gap:8px}
+.dots button{width:9px;height:9px;border:0;border-radius:50%;background:#ccc}
+.dots button.active{background:white}
+
+.facts{max-width:1100px;margin:30px auto;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.fact{background:var(--sky);text-align:center;padding:22px;border-radius:8px}
+.fact h3{color:var(--dark-teal);font-size:17px}
+.fact p{font-size:12px;color:var(--muted)}
+
+.section{max-width:1150px;margin:65px auto;padding:0 25px;scroll-margin-top:90px}
+.section-title{margin-bottom:25px}
+.section-title h2{font-size:28px;color:var(--navy)}
+.section-title p{font-size:14px;color:var(--muted)}
+
+.about-grid{display:grid;grid-template-columns:1fr 1.5fr;gap:20px}
+.card{background:white;padding:25px;border-radius:9px;box-shadow:0 5px 20px rgba(16,27,53,.05)}
+.card h3{color:var(--navy);margin-bottom:10px}
+.card p{font-size:14px;color:var(--muted)}
+.detail-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.detail-grid .card{border-left:4px solid var(--teal)}
+
+.three-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.academic-card{background:white;padding:23px;border-radius:8px;border-top:4px solid var(--teal);box-shadow:0 5px 20px rgba(16,27,53,.05)}
+.academic-card h3{color:var(--navy);font-size:16px;margin-bottom:8px}
+.academic-card p{color:var(--muted);font-size:13px}
+.tag{display:inline-block;background:var(--sky);color:var(--dark-teal);padding:4px 9px;border-radius:15px;font-size:11px;margin-bottom:10px}
+
+.research-intro{background:var(--sky);padding:24px;border-radius:8px;margin-bottom:20px}
+.research-search{display:grid;grid-template-columns:2fr 1fr;gap:12px;margin-bottom:18px}
+.research-search input,.research-search select{padding:13px;border:1px solid var(--border);background:white;border-radius:6px;width:100%}
+.research-count{font-size:13px;color:var(--muted);margin-bottom:15px}
+.research-library{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.research-card{background:white;padding:23px;border-radius:9px;border:1px solid var(--border);display:flex;flex-direction:column;transition:.3s}
+.research-card:hover{transform:translateY(-4px)}
+.research-card h3{font-size:15px;color:var(--navy);margin:12px 0}
+.research-card p{font-size:13px;color:var(--muted)}
+.research-meta{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.research-meta span{background:#f0f4f7;padding:4px 8px;font-size:11px;border-radius:4px}
+.research-link{color:var(--dark-teal);font-weight:bold;font-size:13px;margin-top:12px}
+.research-note{margin-top:20px;padding:17px;background:#fff8e7;border-left:4px solid #d6a33a;font-size:12px;color:#62502d}
+.empty{text-align:center;padding:30px;color:var(--muted)}
+
+.consultancy-action{background:var(--sky);text-align:center;padding:35px 20px;border-radius:9px;margin-top:25px}
+.consultancy-action p{margin:10px 0 20px;color:var(--muted)}
+.mentorship{background:var(--dark-teal);color:white;padding:55px 20px;text-align:center}
+.mentorship h2{font-size:27px}
+.mentorship p{margin:12px 0 22px;font-size:14px}
+.mentorship .btn{background:white;color:var(--dark-teal)}
+
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.contact-card{background:white;padding:24px;text-align:center;border-radius:8px;box-shadow:0 5px 20px rgba(16,27,53,.05)}
+.contact-card h3{color:var(--navy)}
+.contact-card p{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+
+.social-connect{background:#eaf7ff;padding:65px 20px;text-align:center}
+.social-connect h2{color:var(--navy);font-size:28px}
+.social-connect>p{max-width:700px;margin:10px auto 28px;color:var(--muted);font-size:14px}
+.social-cards{max-width:1050px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.social-card{background:white;border-radius:12px;padding:25px 20px;box-shadow:0 5px 20px rgba(16,27,53,.07);transition:.25s}
+.social-card:hover{transform:translateY(-5px)}
+.social-icon{width:52px;height:52px;display:grid;place-items:center;margin:0 auto 12px;border-radius:50%;font-size:25px;font-weight:bold}
+.whatsapp .social-icon{background:#dcfce7;color:#16a34a}
+.facebook .social-icon{background:#dbeafe;color:#1877f2}
+.linkedin .social-icon{background:#dbeafe;color:#0a66c2}
+.social-card h3{font-size:17px;color:var(--navy)}
+.social-card p{font-size:13px;color:var(--muted);margin:7px 0 14px}
+.social-card strong{font-size:13px;color:var(--dark-teal)}
+
+/* BOOKING AND REQUEST FORMS */
+.forms-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.form-card{background:white;padding:26px;border-radius:10px;box-shadow:0 5px 22px rgba(16,27,53,.07);border:1px solid var(--border)}
+.form-card h3{color:var(--navy);font-size:20px;margin-bottom:5px}
+.form-card>p{font-size:13px;color:var(--muted);margin-bottom:18px}
+.form-group{margin-bottom:14px}
+.form-group label{display:block;font-size:13px;font-weight:bold;color:var(--navy);margin-bottom:5px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid #d8e0e8;border-radius:6px;background:#fff;color:var(--text)}
+.form-group textarea{min-height:105px;resize:vertical}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:2px solid #a8ded9;border-color:var(--teal)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.submit-btn{border:0;background:var(--teal);color:white;padding:13px 18px;border-radius:6px;font-weight:bold;width:100%}
+.submit-btn:disabled{opacity:.6;cursor:wait}
+.form-status{display:none;margin-top:14px;padding:12px;border-radius:6px;font-size:13px}
+.form-status.success{display:block;background:#e8f8ef;color:#17633b}
+.form-status.error{display:block;background:#fff0f0;color:#a12626}
+.form-note{font-size:11px!important;color:#788396!important;margin-top:12px!important}
+
+.floating-whatsapp{position:fixed;right:22px;bottom:22px;z-index:999;display:flex;align-items:center;gap:9px;padding:13px 18px;background:#16a34a;color:white;border-radius:50px;font-weight:bold;font-size:13px;box-shadow:0 5px 20px rgba(0,0,0,.2)}
+footer{background:var(--navy);text-align:center;color:white;padding:28px 15px;font-size:13px}
+footer span{color:#45c9bb}
+
+@media(max-width:950px){
+.menu-toggle{display:block}
+.nav-links{display:none;position:absolute;top:65px;left:0;right:0;background:var(--navy);flex-direction:column;padding:22px;align-items:stretch}
+.nav-links.show{display:flex}
+.hero{grid-template-columns:1fr}
+.hero-content{padding:40px 25px}
+.gallery{min-height:400px}
+.about-grid{grid-template-columns:1fr}
+.three-grid{grid-template-columns:repeat(2,1fr)}
+}
+
+@media(max-width:650px){
+.facts,.three-grid,.detail-grid,.research-library,.research-search,.contact-grid,.social-cards,.forms-grid{grid-template-columns:1fr}
+.form-row{grid-template-columns:1fr}
+.gallery{min-height:340px}
+.hero h1{font-size:32px}
+.section{margin:45px auto}
+.logo{font-size:13px}
+.floating-whatsapp{right:12px;bottom:12px;padding:12px 15px}
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<a href="#home" class="logo">
+<span>●</span> DR. TWAHIRWA JEAN CLAUDE
+</a>
+
+<button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="Experience.html">Experience</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="consultancy.html">Consultancy</a></li>
+<li><a href="booking.html">Book / Request</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="meet-button" href="booking.html">MEET WITH DR. TWAHIRWA JEAN CLAUDE</a></li>
+</ul>
+
+</nav>
+</header>
+
+<main>
+
+<!-- HOME PAGE -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+<span class="eyebrow">Academic Excellence | Research | Leadership</span>
+
+<h1>Meet With Dr. TWAHIRWA JEAN CLAUDE</h1>
+
+<h2>Researcher, Consultant & Nursing Educator</h2>
+
+<p>
+Welcome to the academic and professional portfolio of Dr. TWAHIRWA JEAN CLAUDE, an academic professional committed to nursing education, scientific research, healthcare improvement, research consultancy and professional mentorship.
+</p>
+
+<div class="buttons">
+<a href="#research" class="btn btn-primary">Explore Research</a>
+<a href="#consultancy" class="btn btn-outline">Research Consultancy</a>
+<a href="#booking" class="btn btn-outline">Book a Meeting</a>
+</div>
+</div>
+
+<!-- PHOTO SLIDESHOW -->
+<div class="gallery" aria-label="Professional photo slideshow">
+
+     <div class="slide active">
+        <img src="jean-claude-1.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE portrait">
+    </div>
+
+    <div class="slide">
+        <img src="jean-claude-2.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE professional photograph">
+    </div>
+
+    <div class="slide">
+        <img src="jean-claude-3.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE academic activity">
+    </div>
+
+    <div class="slide">
+        <img src="jean-claude-4.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE professional activity">
+    </div>
+
+    <div class="slide">
+        <img src="jean-claude-5.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE">
+    </div>
+
+    <div class="slide">
+        <img src="jean-claude-7.jpg"
+             alt="Dr. TWAHIRWA JEAN CLAUDE">
+
+    <div class="gallery-caption">
+        <h3>Dr. TWAHIRWA JEAN CLAUDE</h3>
+        <p>Research • Education • Professional Consultancy</p>
+    </div>
+
+    <div class="gallery-controls">
+        <button id="prevSlide" type="button">‹</button>
+        <button id="nextSlide" type="button">›</button>
+    </div>
+
+    <div class="dots" id="dots"></div>
+
+</div>
+</section>
+
+<!-- QUICK FACTS -->
+<div class="facts">
+<div class="fact">
+<h3>Research</h3>
+<p>Scientific Publications & Scholarship</p>
+</div>
+
+<div class="fact">
+<h3>Consultancy</h3>
+<p>Academic and Research Guidance</p>
+</div>
+
+<div class="fact">
+<h3>Leadership</h3>
+<p>Nursing Education & Development</p>
+</div>
+</div>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+
+<div class="section-title">
+<span class="eyebrow">Professional Profile</span>
+<h2>About Dr. TWAHIRWA JEAN CLAUDE</h2>
+<p>Biography, expertise and professional interests.</p>
+</div>
+
+<div class="about-grid">
+
+<div class="card">
+<h3>Professional Biography</h3>
+<p>
+Dr. TWAHIRWA JEAN CLAUDE is an academic professional associated with Kibogora Polytechnic, with interests in nursing education, research, healthcare improvement and professional development. His academic and research work includes contributions to palliative care, nursing and public health.
+</p>
+</div>
+
+<div class="detail-grid">
+
+<div class="card">
+<h3>Research</h3>
+<p>Scientific inquiry, research development and scholarly publication.</p>
+</div>
+
+<div class="card">
+<h3>Education</h3>
+<p>Nursing education, clinical learning and student development.</p>
+</div>
+
+<div class="card">
+<h3>Consultancy</h3>
+<p>Research methodology and academic research guidance.</p>
+</div>
+
+<div class="card">
+<h3>Mentorship</h3>
+<p>Supporting students and emerging researchers.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section" id="education">
+
+<div class="section-title">
+<h2>Education & Qualifications</h2>
+<p>Academic qualifications and professional development.</p>
+</div>
+
+<div class="three-grid">
+
+<div class="academic-card">
+<span class="tag">Academic Qualification</span>
+<h3>Educational Background</h3>
+<p>Academic qualifications and professional training to be completed using his verified CV.</p>
+</div>
+
+<div class="academic-card">
+<span class="tag">Professional Development</span>
+<h3>Specialized Training</h3>
+<p>Professional certifications and additional training to be added.</p>
+</div>
+
+<div class="academic-card">
+<span class="tag">Research Profile</span>
+<h3>ORCID Researcher ID</h3>
+<p>0009-0007-0537-7885</p>
+<a class="research-link" href="https://orcid.org/0009-0007-0537-7885" target="_blank" rel="noopener">View ORCID →</a>
+</div>
+
+</div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section" id="leadership">
+
+<div class="section-title">
+<h2>Academic & Professional Experience</h2>
+<p>Institutional contributions and professional responsibilities.</p>
+</div>
+
+<div class="three-grid">
+
+<div class="academic-card">
+<h3>Academic Leadership</h3>
+<p>Academic and faculty leadership contributions at Kibogora Polytechnic.</p>
+</div>
+
+<div class="academic-card">
+<h3>Nursing Education</h3>
+<p>Academic teaching, clinical education and student development.</p>
+</div>
+
+<div class="academic-card">
+<h3>Research Collaboration</h3>
+<p>Scientific research, collaboration and scholarly activities.</p>
+</div>
+
+</div>
+</section>
+
+<!-- RESEARCH -->
+<section class="section" id="research">
+
+<div class="section-title">
+<span class="eyebrow">Scientific Contributions</span>
+<h2>Research & Publications</h2>
+<p>Explore research papers and academic contributions associated with Dr. TWAHIRWA JEAN CLAUDE.</p>
+</div>
+
+<div class="research-intro">
+<h3>Research Repository</h3>
+<p>
+Research areas include palliative care, nursing, medical-surgical care and public health. This collection will be expanded as additional publications are identified and verified.
+</p>
+<a class="research-link" href="https://orcid.org/0009-0007-0537-7885" target="_blank" rel="noopener">View ORCID Profile →</a>
+</div>
+
+<div class="research-search">
+<input type="search" id="researchSearch" placeholder="Search by research title, journal or year..." aria-label="Search research">
+
+<select id="researchCategory" aria-label="Filter research category">
+<option value="all">All Research Areas</option>
+<option value="palliative">Palliative Care</option>
+<option value="nursing">Nursing</option>
+<option value="public-health">Public Health</option>
+</select>
+</div>
+
+<p class="research-count" id="researchCount" aria-live="polite"></p>
+
+<div class="research-library" id="researchLibrary"></div>
+
+<div class="empty" id="noResearch" hidden>No matching research records found.</div>
+
+</section>
+
+<!-- CONSULTANCY -->
+<section class="section" id="consultancy">
+
+<div class="section-title">
+<span class="eyebrow">Professional Services</span>
+<h2>Research Consultancy</h2>
+<p>Academic and scientific research support.</p>
+</div>
+
+<div class="three-grid">
+
+<div class="academic-card">
+<h3>Research Methodology</h3>
+<p>Research design, sampling, data collection and methodological guidance.</p>
+</div>
+
+<div class="academic-card">
+<h3>Proposal Development</h3>
+<p>Research questions, objectives, literature reviews and proposal development.</p>
+</div>
+
+<div class="academic-card">
+<h3>Data Analysis</h3>
+<p>Quantitative and qualitative data analysis and interpretation.</p>
+</div>
+
+<div class="academic-card">
+<h3>Scientific Writing</h3>
+<p>Academic manuscripts, scientific reports and research communication.</p>
+</div>
+
+<div class="academic-card">
+<h3>Publication Guidance</h3>
+<p>Journal selection, manuscript preparation and submission guidance.</p>
+</div>
+
+<div class="academic-card">
+<h3>Research Mentorship</h3>
+<p>Research supervision and development of emerging scholars.</p>
+</div>
+
+</div>
+
+<div class="consultancy-action">
+<h3>Looking for Research Consultancy?</h3>
+<p>Send a request with a short description of the support you need.</p>
+<a class="btn btn-primary" href="#booking">Submit a Research Request</a>
+</div>
+
+</section>
+
+<!-- MENTORSHIP -->
+<section class="mentorship" id="mentorship">
+<h2>Meet With Dr. TWAHIRWA JEAN CLAUDE</h2>
+<p>Connect for research mentorship, academic guidance, professional consultation and scientific collaboration.</p>
+<a class="btn" href="#booking">Book a Meeting or Submit a Request →</a>
+</section>
+
+<!-- BOOKING AND REQUEST FORMS -->
+<section class="section" id="booking">
+
+<div class="section-title">
+<span class="eyebrow">Appointments & Enquiries</span>
+<h2>Book a Meeting or Make a Request</h2>
+<p>Complete the appropriate form. Your submission will be sent to Dr. TWAHIRWA's email address for follow-up.</p>
+</div>
+
+<div class="forms-grid">
+
+<!-- APPOINTMENT BOOKING FORM -->
+<form class="form-card" id="bookingForm">
+
+<h3>Appointment Booking</h3>
+<p>Request a consultation or meeting. Your preferred slot is a request and will be confirmed after review.</p>
+
+<div class="form-group">
+<label for="bookName">Full name *</label>
+<input id="bookName" name="name" required autocomplete="name" placeholder="Your full name">
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label for="bookEmail">Email address *</label>
+<input id="bookEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+</div>
+
+<div class="form-group">
+<label for="bookPhone">Phone / WhatsApp *</label>
+<input id="bookPhone" name="phone" type="tel" required placeholder="+250...">
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label for="bookDate">Preferred date *</label>
+<input id="bookDate" name="preferred_date" type="date" required>
+</div>
+
+<div class="form-group">
+<label for="bookTime">Preferred time *</label>
+<select id="bookTime" name="preferred_time" required>
+<option value="">Choose time</option>
+<option>08:00–09:00</option>
+<option>09:00–10:00</option>
+<option>10:00–11:00</option>
+<option>11:00–12:00</option>
+<option>13:00–14:00</option>
+<option>14:00–15:00</option>
+<option>15:00–16:00</option>
+</select>
+</div>
+
+</div>
+
+<div class="form-group">
+<label for="bookType">Meeting type *</label>
+<select id="bookType" name="meeting_type" required>
+<option value="">Select meeting type</option>
+<option>Research consultancy</option>
+<option>Academic mentorship</option>
+<option>Research collaboration</option>
+<option>Scientific writing / publication</option>
+<option>General consultation</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="bookMode">Preferred meeting format</label>
+<select id="bookMode" name="meeting_format">
+<option>Online meeting</option>
+<option>In-person meeting</option>
+<option>Phone / WhatsApp call</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="bookPurpose">Purpose of meeting *</label>
+<textarea id="bookPurpose" name="purpose" required placeholder="Briefly explain what you would like to discuss..."></textarea>
+</div>
+
+<button class="submit-btn" type="submit">Send Appointment Request</button>
+
+<div class="form-status" id="bookingStatus" role="status" aria-live="polite"></div>
+
+<p class="form-note">
+Submitting this form requests an appointment; it does not reserve or confirm a calendar slot. You will be contacted after availability is checked.
+</p>
+
+</form>
+
+<!-- RESEARCH REQUEST FORM -->
+<form class="form-card" id="requestForm">
+
+<h3>Research / Consultancy Request</h3>
+<p>Describe the academic, research or professional support you are seeking.</p>
+
+<div class="form-group">
+<label for="reqName">Full name *</label>
+<input id="reqName" name="name" required autocomplete="name" placeholder="Your full name">
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label for="reqEmail">Email address *</label>
+<input id="reqEmail" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+</div>
+
+<div class="form-group">
+<label for="reqPhone">Phone / WhatsApp</label>
+<input id="reqPhone" name="phone" type="tel" placeholder="+250...">
+</div>
+
+</div>
+
+<div class="form-group">
+<label for="reqType">Type of request *</label>
+<select id="reqType" name="request_type" required>
+<option value="">Select service</option>
+<option>Research methodology</option>
+<option>Proposal development</option>
+<option>Literature review</option>
+<option>Quantitative data analysis</option>
+<option>Qualitative data analysis</option>
+<option>Scientific writing</option>
+<option>Publication guidance</option>
+<option>Academic mentorship</option>
+<option>Research collaboration</option>
+<option>Other</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="reqDeadline">Expected timeline</label>
+<input id="reqDeadline" name="timeline" placeholder="e.g. Within one month">
+</div>
+
+<div class="form-group">
+<label for="reqDetails">Describe your request *</label>
+<textarea id="reqDetails" name="details" required placeholder="Provide context, objectives and the support you need..."></textarea>
+</div>
+
+<button class="submit-btn" type="submit">Submit Research Request</button>
+
+<div class="form-status" id="requestStatus" role="status" aria-live="polite"></div>
+
+<p class="form-note">
+Please do not include confidential patient information or identifiable personal health data in this form.
+</p>
+
+</form>
+</div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="social-connect" id="connect">
+
+<h2>Connect With Dr. TWAHIRWA JEAN CLAUDE</h2>
+
+<p>
+Have a research question, need academic guidance, or wish to collaborate? Connect directly through his professional channels.
+</p>
+
+<div class="social-cards">
+
+<a class="social-card whatsapp" href="https://wa.me/250784810644" target="_blank" rel="noopener noreferrer">
+<span class="social-icon">☏</span>
+<h3>Chat With Dr. TWAHIRWA JEAN CLAUDE on WhatsApp</h3>
+<p>Start a direct conversation about research, consultancy or mentorship.</p>
+<strong>Send a WhatsApp Message →</strong>
+</a>
+
+<a class="social-card facebook" href="https://web.facebook.com/profile.php?id=100081601130015" target="_blank" rel="noopener noreferrer">
+<span class="social-icon">f</span>
+<h3>Meet Dr. TWAHIRWA JEAN CLAUDE on Facebook</h3>
+<p>Visit his Facebook profile and follow his activities.</p>
+<strong>Visit Facebook Profile →</strong>
+</a>
+
+<a class="social-card linkedin" href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/" target="_blank" rel="noopener noreferrer">
+<span class="social-icon">in</span>
+<h3>Connect with Dr. TWAHIRWA JEAN CLAUDE on LinkedIn</h3>
+<p>Explore professional connections and academic collaborations.</p>
+<strong>Connect Professionally →</strong>
+</a>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+
+<div class="section-title">
+<h2>Contact & Professional Connections</h2>
+<p>Get in touch for professional and academic opportunities.</p>
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+<h3>Email</h3>
+<p><a href="mailto:twahirwajeanclaude1@gmail.com">twahirwajeanclaude1@gmail.com</a></p>
+</div>
+
+<div class="contact-card">
+<h3>Institution</h3>
+<p>Kibogora Polytechnic, Rwanda</p>
+</div>
+
+<div class="contact-card">
+<h3>ORCID</h3>
+<p><a href="https://orcid.org/0009-0007-0537-7885" target="_blank" rel="noopener">View Researcher Profile</a></p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="floating-whatsapp" href="https://wa.me/250784810644" target="_blank" rel="noopener noreferrer" aria-label="Chat with Dr. TWAHIRWA on WhatsApp">
+☏ <span>Chat With DR. TWAHIRWA JEAN CLAUDE</span>
+</a>
+
+<!-- FOOTER -->
+<footer>
+<h3>DR. TWAHIRWA JEAN CLAUDE</h3>
+<p>Research • Nursing Education • Consultancy • Academic Leadership</p>
+<p>Email: <a href="mailto:twahirwajeanclaude1@gmail.com">twahirwajeanclaude1@gmail.com</a></p>
+<p>© <span id="year"></span> All Rights Reserved.</p>
+</footer>
+
+<script>
+
+/* FORM EMAIL DESTINATION */
+const FORM_ENDPOINT = "https://formsubmit.co/ajax/twahirwajeanclaude1@gmail.com";
+
+
+/* MOBILE NAVIGATION */
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+
+const open = navLinks.classList.toggle("show");
+
+menuToggle.textContent = open ? "×" : "☰";
+
+menuToggle.setAttribute("aria-expanded", String(open));
+
+});
+
+document.querySelectorAll(".nav-links a").forEach(a => {
+
+a.addEventListener("click", () => {
+
+navLinks.classList.remove("show");
+
+menuToggle.textContent = "☰";
+
+menuToggle.setAttribute("aria-expanded", "false");
+
+});
+
+});
+
+
+/* PHOTO SLIDESHOW */
+
+const slides = [...document.querySelectorAll(".slide")];
+
+const dotsContainer = document.getElementById("dots");
+
+let currentSlide = 0;
+
+let slideTimer;
+
+slides.forEach((s, i) => {
+
+const d = document.createElement("button");
+
+d.type = "button";
+
+d.setAttribute("aria-label", "Show photograph " + (i + 1));
+
+d.addEventListener("click", () => {
+
+showSlide(i);
+
+restartSlideTimer();
+
+});
+
+dotsContainer.appendChild(d);
+
+});
+
+const dots = [...dotsContainer.querySelectorAll("button")];
+
+
+function showSlide(i) {
+
+currentSlide = (i + slides.length) % slides.length;
+
+slides.forEach((s, n) => {
+
+s.classList.toggle("active", n === currentSlide);
+
+});
+
+dots.forEach((d, n) => {
+
+d.classList.toggle("active", n === currentSlide);
+
+});
+
+}
+
+
+function restartSlideTimer() {
+
+clearInterval(slideTimer);
+
+slideTimer = setInterval(() => {
+
+showSlide(currentSlide + 1);
+
+}, 5000);
+
+}
+
+
+document.getElementById("nextSlide").addEventListener("click", () => {
+
+showSlide(currentSlide + 1);
+
+restartSlideTimer();
+
+});
+
+
+document.getElementById("prevSlide").addEventListener("click", () => {
+
+showSlide(currentSlide - 1);
+
+restartSlideTimer();
+
+});
+
+
+showSlide(0);
+
+restartSlideTimer();
+
+
+
+
+/* RESEARCH LIBRARY */
+
+const researchPapers = [
+
+{
+title:"Palliative care conditions managed at home and self-reported challenges experienced by informal home-based caregivers in Rwanda: A qualitative study",
+year:2025,
+category:"palliative",
+journal:"BMC Palliative Care",
+type:"Research Article",
+doi:"10.1186/s12904-025-01905-0",
+url:"https://doi.org/10.1186/s12904-025-01905-0"
+},
+
+{
+title:"Exploring Satisfaction and Support Needs of Informal Home Caregivers Using Palliative Care Services: A Mixed-Methods Study from Rwanda",
+year:2026,
+category:"palliative",
+journal:"Rwanda Journal of Medicine and Health Sciences",
+type:"Research Article",
+doi:"10.4314/rjmhs.v9i1.5",
+url:"https://doi.org/10.4314/rjmhs.v9i1.5"
+},
+
+{
+title:"Mapping Existing Informal Home Caregiver Support Guidelines for Palliative Care: A Scoping Review",
+year:2026,
+category:"palliative",
+journal:"Rwanda Journal of Medicine and Health Sciences",
+type:"Scoping Review",
+doi:"10.4314/rjmhs.v9i1.17",
+url:"https://doi.org/10.4314/rjmhs.v9i1.17"
+},
+
+{
+title:"Knowledge and Home Caregiver's Experiences of Palliative Health Care Team Support in Pain Management of Cancer Patients in Rwanda",
+year:2024,
+category:"palliative",
+journal:"American Journal of Cancer Prevention",
+type:"Research Article",
+doi:"10.12691/ajcp-11-1-3",
+url:"https://doi.org/10.12691/ajcp-11-1-3"
+},
+
+{
+title:"Knowledge and Home Caregivers Experiences from Palliative Health Care Team Education in Pain Management of Cancer Patients in Rwanda",
+year:2019,
+category:"palliative",
+journal:"University of Rwanda",
+type:"Master's Dissertation",
+doi:"",
+url:"http://dr.ur.ac.rw/handle/123456789/2095"
+},
+
+{
+title:"Adherence to Treatment and Associated Factors Among Patients with Type 2 Diabetes Mellitus Attending Non-Communicable Disease Services in Rwanda: A Cross-Sectional Study",
+year:2025,
+category:"public-health",
+journal:"Kibogora Polytechnic Scientific Journal",
+type:"Research Article",
+doi:"10.33618/KPScJ.2024.01.004",
+url:"https://www.journal.kp.ac.rw/index.php/kp/article/view/65"
+},
+
+{
+title:"Factors Associated with the Utilization of Immediate Postpartum Family Planning Among Women Attending Kibogora Health Center, Nyamasheke District, Rwanda",
+year:2024,
+category:"nursing",
+journal:"Kibogora Polytechnic Scientific Journal",
+type:"Research Article",
+doi:"",
+url:"https://www.journal.kp.ac.rw/index.php/kp/article/view/7"
+},
+
+{
+title:"Prevalence of Hypertension and Factors Associated with Screening Uptake in Kanjongo, Nyamasheke District, Rwanda",
+year:2018,
+category:"public-health",
+journal:"Kibogora Polytechnic Scientific Journal",
+type:"Research Article",
+doi:"",
+url:"https://www.journal.kp.ac.rw/index.php/kp/article/view/19"
+},
+
+{
+title:"Prevalence of Diabetes Mellitus and Factors Associated with Screening Uptake in Kanjongo, Nyamasheke District, Rwanda",
+year:2018,
+category:"public-health",
+journal:"Kibogora Polytechnic Scientific Journal",
+type:"Research Article",
+doi:"",
+url:"https://www.journal.kp.ac.rw/index.php/kp/article/view/18"
+}
+
+];
+
+
+const categoryNames = {
+palliative:"Palliative Care",
+nursing:"Nursing",
+"public-health":"Public Health"
+};
+
+
+function displayResearch() {
+
+const library = document.getElementById("researchLibrary");
+
+const q = document.getElementById("researchSearch").value.toLowerCase().trim();
+
+const cat = document.getElementById("researchCategory").value;
+
+const matches = researchPapers.filter(p =>
+
+(p.title + " " + p.journal + " " + p.year + " " + p.type).toLowerCase().includes(q)
+
+&&
+
+(cat === "all" || cat === p.category)
+
+);
+
+library.replaceChildren();
+
+document.getElementById("researchCount").textContent =
+`Showing ${matches.length} of ${researchPapers.length} research records`;
+
+document.getElementById("noResearch").hidden = matches.length > 0;
+
+
+matches.forEach(p => {
+
+const card = document.createElement("article");
+
+card.className = "research-card";
+
+const tag = document.createElement("span");
+
+tag.className = "tag";
+
+tag.textContent = p.type;
+
+const title = document.createElement("h3");
+
+title.textContent = p.title;
+
+const journal = document.createElement("p");
+
+journal.textContent = p.journal;
+
+const meta = document.createElement("div");
+
+meta.className = "research-meta";
+
+[String(p.year), categoryNames[p.category]].forEach(t => {
+
+const s = document.createElement("span");
+
+s.textContent = t;
+
+meta.appendChild(s);
+
+});
+
+card.append(tag, title, journal, meta);
+
+
+if (p.doi) {
+
+const doi = document.createElement("p");
+
+doi.textContent = "DOI: " + p.doi;
+
+card.appendChild(doi);
+
+}
+
+
+const a = document.createElement("a");
+
+a.className = "research-link";
+
+a.href = p.url;
+
+a.target = "_blank";
+
+a.rel = "noopener noreferrer";
+
+a.textContent = "View Original Research →";
+
+card.appendChild(a);
+
+library.appendChild(card);
+
+});
+
+}
+
+
+document.getElementById("researchSearch").addEventListener("input", displayResearch);
+
+document.getElementById("researchCategory").addEventListener("change", displayResearch);
+
+displayResearch();
+
+
+/* SET MINIMUM BOOKING DATE */
+
+document.getElementById("bookDate").min = new Date().toISOString().split("T")[0];
+
+
+/* FORM SUBMISSION */
+
+async function submitContactForm(form, statusId, subject) {
+
+const status = document.getElementById(statusId);
+
+const button = form.querySelector('button[type="submit"]');
+
+status.className = "form-status";
+
+status.textContent = "";
+
+button.disabled = true;
+
+button.textContent = "Sending...";
+
+const data = Object.fromEntries(new FormData(form).entries());
+
+data._subject = subject;
+
+data._template = "table";
+
+data._captcha = "true";
+
+
+try {
+
+const response = await fetch(FORM_ENDPOINT, {
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json",
+"Accept":"application/json"
+},
+
+body:JSON.stringify(data)
+
+});
+
+
+const result = await response.json().catch(() => ({}));
+
+
+if (!response.ok || result.success === false) {
+
+throw new Error(result.message || "The request could not be sent.");
+
+}
+
+
+status.className = "form-status success";
+
+status.textContent =
+"Thank you. Your submission has been sent successfully. The office will contact you after reviewing your request. If this is your first FormSubmit submission, check the recipient inbox for an activation email and complete activation.";
+
+form.reset();
+
+
+} catch (error) {
+
+status.className = "form-status error";
+
+status.textContent =
+"We could not confirm delivery. Please try again or contact directly by WhatsApp (+250 784 810 644) or email twahirwajeanclaude1@gmail.com. Details: " + error.message;
+
+
+} finally {
+
+button.disabled = false;
+
+button.textContent = statusId === "bookingStatus"
+? "Send Appointment Request"
+: "Submit Research Request";
+
+}
+
+}
+
+
+/* BOOKING FORM EVENT */
+
+document.getElementById("bookingForm").addEventListener("submit", e => {
+
+e.preventDefault();
+
+if (!e.currentTarget.reportValidity()) return;
+
+submitContactForm(
+e.currentTarget,
+"bookingStatus",
+"New appointment booking request - Dr. TWAHIRWA website"
+);
+
+});
+
+
+/* RESEARCH REQUEST FORM EVENT */
+
+document.getElementById("requestForm").addEventListener("submit", e => {
+
+e.preventDefault();
+
+if (!e.currentTarget.reportValidity()) return;
+
+submitContactForm(
+e.currentTarget,
+"requestStatus",
+"New research / consultancy request - Dr. TWAHIRWA website"
+);
+
+});
+
+
+/* AUTOMATIC FOOTER YEAR */
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

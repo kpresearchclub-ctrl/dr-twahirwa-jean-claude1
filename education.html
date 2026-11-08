@@ -1,0 +1,832 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Education & Qualifications | Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --white: #ffffff;
+    --text: #263348;
+    --muted: #687386;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5faff;
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* NAVIGATION */
+
+header {
+    background: var(--navy);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.logo span { color: #42c5b5; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 18px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 13px;
+}
+
+.nav-links a:hover,
+.nav-links a.active { color: #42c5b5; }
+
+.nav-button {
+    background: var(--teal);
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 26px;
+}
+
+/* HERO */
+
+.page-hero {
+    background: linear-gradient(120deg, #101b35, #08766e);
+    color: white;
+    text-align: center;
+    padding: 85px 25px;
+}
+
+.page-hero span {
+    color: #6de0d1;
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.page-hero h1 {
+    font-size: clamp(30px, 5vw, 46px);
+    margin: 15px 0;
+}
+
+.page-hero p {
+    max-width: 750px;
+    margin: auto;
+    color: #e2f4f2;
+    font-size: 15px;
+}
+
+/* GENERAL SECTIONS */
+
+.container {
+    max-width: 1150px;
+    margin: auto;
+    padding: 60px 25px;
+}
+
+.section-heading { margin-bottom: 28px; }
+
+.section-heading span {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 28px;
+    margin-top: 7px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* INTRODUCTION */
+
+.intro-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+    border-left: 5px solid var(--teal);
+}
+
+.intro-card h2 {
+    color: var(--navy);
+    margin-bottom: 12px;
+}
+
+.intro-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+/* EDUCATION TIMELINE */
+
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+    padding-left: 35px;
+    border-left: 3px solid #b7e4df;
+}
+
+.timeline-item {
+    position: relative;
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border-radius: 9px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -46px;
+    top: 28px;
+    width: 18px;
+    height: 18px;
+    background: var(--teal);
+    border: 4px solid var(--sky);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    display: inline-block;
+    background: var(--sky);
+    color: var(--dark-teal);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.timeline-item h3 {
+    color: var(--navy);
+    font-size: 19px;
+    margin-bottom: 7px;
+}
+
+.timeline-item h4 {
+    color: var(--teal);
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.timeline-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* QUALIFICATIONS */
+
+.qualification-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.qualification-card {
+    background: white;
+    padding: 25px;
+    border-radius: 9px;
+    border-top: 4px solid var(--teal);
+    box-shadow: 0 5px 20px rgba(0,0,0,.05);
+}
+
+.qualification-icon {
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    background: var(--sky);
+    color: var(--dark-teal);
+    border-radius: 50%;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+
+.qualification-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 9px;
+}
+
+.qualification-card p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* TRAINING */
+
+.training-section {
+    background: var(--sky);
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.training-card {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+}
+
+.training-card h3 {
+    color: var(--navy);
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.training-card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* ACADEMIC DEVELOPMENT */
+
+.development-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.development-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.check {
+    color: var(--teal);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.development-item h3 {
+    color: var(--navy);
+    font-size: 15px;
+}
+
+.development-item p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* RESEARCH PROFILE */
+
+.research-profile {
+    background: var(--navy);
+    color: white;
+    padding: 55px 25px;
+    text-align: center;
+}
+
+.research-profile h2 {
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.research-profile p {
+    max-width: 700px;
+    margin: auto;
+    color: #dce8f2;
+    font-size: 14px;
+}
+
+.research-profile a {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--teal);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+/* CTA */
+
+.cta {
+    background: var(--sky);
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.cta h2 {
+    color: var(--navy);
+    font-size: 27px;
+}
+
+.cta p {
+    color: var(--muted);
+    margin: 10px auto 20px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px;
+}
+
+.btn:hover { background: var(--dark-teal); }
+
+/* FOOTER */
+
+footer {
+    background: var(--navy);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+    font-size: 13px;
+}
+
+footer span { color: #42c5b5; }
+
+footer a:hover { color: #42c5b5; }
+
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: var(--navy);
+        flex-direction: column;
+        padding: 25px;
+    }
+
+    .nav-links.show { display: flex; }
+
+    .qualification-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .qualification-grid,
+    .training-grid,
+    .development-list {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero { padding: 60px 20px; }
+
+    .section-heading h2 { font-size: 24px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<nav class="navbar">
+
+<a href="index.html" class="logo">
+<span>●</span> DR. TWAHIRWA JEAN CLAUDE
+</a>
+
+<button class="menu-toggle" id="menuToggle"
+aria-label="Toggle navigation">☰</button>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="education.html">Education</a></li>
+<li><a href="Experience.html">Experience</a></li>
+<li><a href="research.html">Research</a></li>
+<li><a href="consultancy.html">Consultancy</a></li>
+<li><a href="booking.html">Book / Request</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a class="meet-button" href="booking.html">MEET WITH DR. TWAHIRWA JEAN CLAUDE</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- HERO -->
+
+<section class="page-hero">
+
+<span>Academic Background</span>
+
+<h1>Education & Qualifications</h1>
+
+<p>
+Academic preparation, professional qualifications,
+specialized training and continuous professional development
+of Dr. TWAHIRWA JEAN CLAUDE.
+</p>
+
+</section>
+
+<!-- INTRODUCTION -->
+
+<section class="container">
+
+<div class="intro-card">
+
+<h2>Academic & Professional Development</h2>
+
+<p>
+Education and lifelong learning are essential foundations
+for academic excellence, professional competence and
+scientific contribution. This page presents the academic
+and professional development profile of Dr. TWAHIRWA
+JEAN CLAUDE.
+</p>
+
+<p style="margin-top:12px;">
+23 September 2026
+PhD Qualification
+University of Rwanda
+Qualified for PhD studies at the University of Rwanda, marking an important milestone in academic and professional development.
+</p>
+
+</div>
+
+</section>
+
+<!-- ACADEMIC HISTORY -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Academic Journey</span>
+<h2>Academic Qualifications</h2>
+<p>Formal education and academic achievements.</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<span class="timeline-date">Academic Qualification</span>
+
+<h3>Doctoral Degree / PhD</h3>
+
+<h4>Institution and Field of Study</h4>
+
+<p>
+Insert the official doctoral qualification, specialization,
+awarding institution and completion year if applicable.
+Do not publish this qualification unless confirmed by
+the official academic records.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span class="timeline-date">Postgraduate Education</span>
+
+<h3>Master's Degree</h3>
+
+<h4>Institution and Field of Study</h4>
+
+<p>
+Insert the verified master's degree, specialization,
+institution and year of completion.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<span class="timeline-date">Undergraduate Education</span>
+
+<h3>Bachelor's Degree</h3>
+
+<h4>Institution and Field of Study</h4>
+
+<p>
+Insert the verified undergraduate qualification,
+academic discipline and completion year.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROFESSIONAL QUALIFICATIONS -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Professional Credentials</span>
+<h2>Professional Qualifications</h2>
+<p>Professional certifications, registrations and credentials.</p>
+</div>
+
+<div class="qualification-grid">
+
+<div class="qualification-card">
+<div class="qualification-icon">01</div>
+<h3>Professional Registration</h3>
+<p>
+Insert relevant professional registration, licensing
+authority, registration number where appropriate,
+and current status.
+</p>
+</div>
+
+<div class="qualification-card">
+<div class="qualification-icon">02</div>
+<h3>Professional Certification</h3>
+<p>
+Add verified professional certificates and their
+awarding organizations.
+</p>
+</div>
+
+<div class="qualification-card">
+<div class="qualification-icon">03</div>
+<h3>Specialized Qualification</h3>
+<p>
+Include additional academic or professional
+specializations supported by official records.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- TRAINING -->
+
+<section class="training-section">
+
+<div class="container">
+
+<div class="section-heading">
+<span>Skills & Competencies</span>
+<h2>Professional Training & Short Courses</h2>
+<p>
+Relevant professional training and specialized learning
+experiences.
+</p>
+</div>
+
+<div class="training-grid">
+
+<div class="training-card">
+<h3>Research Methodology</h3>
+<p>
+Add verified training in research design, scientific
+methodology, data collection and analysis.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Nursing & Healthcare</h3>
+<p>
+Add relevant nursing, clinical practice, healthcare
+quality and patient safety training.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Academic Teaching</h3>
+<p>
+Add professional development in teaching methods,
+curriculum development and student assessment.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Leadership & Management</h3>
+<p>
+Add verified training in institutional leadership,
+management and professional administration.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Research Ethics</h3>
+<p>
+Add research ethics, responsible conduct of research
+and human-subject protection training.
+</p>
+</div>
+
+<div class="training-card">
+<h3>Digital & Technical Skills</h3>
+<p>
+Add verified digital competencies, statistical
+software and research technology training.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTINUOUS DEVELOPMENT -->
+
+<section class="container">
+
+<div class="section-heading">
+<span>Lifelong Learning</span>
+<h2>Continuous Professional Development</h2>
+<p>
+Commitment to maintaining and improving professional
+knowledge and competencies.
+</p>
+</div>
+
+<div class="development-list">
+
+<div class="development-item">
+<span class="check">✓</span>
+<div>
+<h3>Scientific Conferences</h3>
+<p>Participation in academic and scientific conferences.</p>
+</div>
+</div>
+
+<div class="development-item">
+<span class="check">✓</span>
+<div>
+<h3>Research Workshops</h3>
+<p>Participation in research training and scientific workshops.</p>
+</div>
+</div>
+
+<div class="development-item">
+<span class="check">✓</span>
+<div>
+<h3>Academic Publications</h3>
+<p>Continuous engagement with scientific literature and publication.</p>
+</div>
+</div>
+
+<div class="development-item">
+<span class="check">✓</span>
+<div>
+<h3>Professional Collaboration</h3>
+<p>Learning through academic and multidisciplinary partnerships.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- RESEARCHER PROFILE -->
+
+<section class="research-profile">
+
+<h2>Researcher Identification</h2>
+
+<p>
+Access the researcher's ORCID profile to explore
+research identification and associated scholarly records.
+</p>
+
+<a href="https://orcid.org/0009-0007-0537-7885"
+target="_blank" rel="noopener noreferrer">
+View ORCID Profile →
+</a>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Academic Collaboration & Professional Engagement</h2>
+
+<p>
+For academic collaboration, research consultancy,
+mentorship and professional engagement, get in touch.
+</p>
+
+<a href="index.html#booking" class="btn">Book a Meeting</a>
+
+<a href="index.html#contact" class="btn">Contact</a>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h3>DR. TWAHIRWA JEAN CLAUDE</h3>
+
+<p>Research • Education • Consultancy • Leadership</p>
+
+<p>
+Email:
+<a href="mailto:twahirwajeanclaude1@gmail.com">
+twahirwajeanclaude1@gmail.com
+</a>
+</p>
+
+<p>
+<a href="https://wa.me/250784810644" target="_blank">WhatsApp</a>
+|
+<a href="https://web.facebook.com/profile.php?id=100081601130015"
+target="_blank">Facebook</a>
+|
+<a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+target="_blank">LinkedIn</a>
+</p>
+
+<p>© <span id="year"></span> All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("show");
+    });
+});
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>

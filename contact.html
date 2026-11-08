@@ -1,0 +1,801 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --background: #f5faff;
+    --white: #ffffff;
+    --text: #344054;
+    --muted: #667085;
+    --border: #dce7ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(16,27,53,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.logo span {
+    display: block;
+    color: var(--teal);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--teal);
+}
+
+.nav-links .booking-link {
+    background: var(--teal);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--navy);
+    font-size: 27px;
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(120deg, var(--navy), var(--dark-teal));
+    padding: 85px 5%;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #a7e7df;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-size: clamp(34px, 5vw, 50px);
+    margin: 12px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #e2f3f1;
+    max-width: 700px;
+    margin: auto;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-white {
+    background: white;
+    color: var(--navy);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.container {
+    max-width: 1150px;
+    width: 90%;
+    margin: auto;
+}
+
+.section {
+    padding: 70px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.section-heading span {
+    color: var(--teal);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    max-width: 680px;
+    margin: auto;
+    color: var(--muted);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.contact-card {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    background: white;
+    border: 1px solid var(--border);
+    padding: 24px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--teal);
+    box-shadow: 0 8px 20px rgba(16,27,53,0.07);
+}
+
+.contact-icon {
+    min-width: 52px;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--sky);
+    color: var(--dark-teal);
+    font-size: 24px;
+}
+
+.contact-card h3 {
+    color: var(--navy);
+    font-size: 17px;
+}
+
+.contact-card p {
+    color: var(--muted);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    color: var(--teal);
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+.form-section {
+    background: var(--sky);
+}
+
+.form-layout {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 45px;
+    align-items: start;
+}
+
+.form-intro h2 {
+    color: var(--navy);
+    font-size: 31px;
+    line-height: 1.3;
+    margin: 10px 0 15px;
+}
+
+.form-intro p {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.form-intro .highlight {
+    color: var(--dark-teal);
+    font-weight: bold;
+}
+
+.contact-form {
+    background: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(16,27,53,0.06);
+}
+
+.contact-form h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: var(--navy);
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(22,141,131,0.1);
+}
+
+.form-group textarea {
+    min-height: 135px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    background: var(--teal);
+    color: white;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.submit-btn:hover {
+    background: var(--dark-teal);
+}
+
+.form-note {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.connect-section {
+    background: white;
+    text-align: center;
+}
+
+.connect-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 12px;
+    padding: 45px 25px;
+}
+
+.connect-box h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.connect-box p {
+    color: #cbd5e1;
+    margin-bottom: 22px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.social-links a {
+    display: inline-block;
+    border: 1px solid #a7e7df;
+    color: white;
+    padding: 10px 19px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.social-links a:hover {
+    background: var(--teal);
+}
+
+footer {
+    background: #0a1328;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 30px 5%;
+}
+
+footer strong { color: white; }
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #a7e7df;
+}
+
+footer p { font-size: 12px; }
+
+@media(max-width: 850px) {
+    .menu-toggle { display: block; }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        padding: 20px 5%;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show { display: flex; }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .form-layout { grid-template-columns: 1fr; }
+}
+
+@media(max-width: 550px) {
+    .hero { padding: 65px 5%; }
+
+    .section { padding: 50px 0; }
+
+    .section-heading h2 { font-size: 25px; }
+
+    .contact-form { padding: 22px; }
+
+    .connect-box h2 { font-size: 23px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            DR. TWAHIRWA JEAN CLAUDE
+            <span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="research.html">Research</a>
+            <a href="consultancy.html">Consultancy</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="booking.html" class="booking-link">Book / Request</a>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">Let's Connect</span>
+
+        <h1>Contact Dr. TWAHIRWA JEAN CLAUDE</h1>
+
+        <p>
+            For academic enquiries, research collaboration, consultancy,
+            mentorship, professional opportunities and institutional
+            engagement, feel free to get in touch.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#contact-details" class="btn btn-white">
+                Contact Details
+            </a>
+
+            <a href="#message" class="btn btn-outline">
+                Send a Message
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT DETAILS -->
+<section class="section" id="contact-details">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>Communication Channels</span>
+            <h2>Get in Touch</h2>
+            <p>
+                Choose your preferred communication channel.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-card">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h3>Email Address</h3>
+                    <p>For official and professional enquiries.</p>
+                    <a href="mailto:twahirwajeanclaude1@gmail.com">
+                        twahirwajeanclaude1@gmail.com
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">☏</div>
+                <div>
+                    <h3>WhatsApp</h3>
+                    <p>Connect directly through WhatsApp.</p>
+                    <a href="https://wa.me/250784810644" target="_blank">
+                        +250 784 810 644
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">f</div>
+                <div>
+                    <h3>Facebook</h3>
+                    <p>Follow and connect on Facebook.</p>
+                    <a href="https://web.facebook.com/profile.php?id=100081601130015"
+                       target="_blank">
+                        Visit Facebook Profile
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <div class="contact-icon">in</div>
+                <div>
+                    <h3>LinkedIn</h3>
+                    <p>Professional networking and collaboration.</p>
+                    <a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+                       target="_blank">
+                        Visit LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="section form-section" id="message">
+    <div class="container">
+        <div class="form-layout">
+
+            <div class="form-intro">
+                <span style="color:var(--teal); font-weight:bold;
+                             font-size:12px; letter-spacing:2px;">
+                    SEND AN ENQUIRY
+                </span>
+
+                <h2>Let's Start a Conversation</h2>
+
+                <p>
+                    Have a question, proposal or opportunity for
+                    collaboration? Send a message using the contact form.
+                </p>
+
+                <p>
+                    <span class="highlight">Academic enquiries:</span>
+                    Research, education and scholarly discussions.
+                </p>
+
+                <p>
+                    <span class="highlight">Professional enquiries:</span>
+                    Consultancy, training and institutional collaboration.
+                </p>
+
+                <p>
+                    <span class="highlight">Other enquiries:</span>
+                    Speaking engagements, mentorship and networking.
+                </p>
+
+                <p>
+                    For meeting appointments, visit the
+                    <a href="booking.html"
+                       style="color:var(--teal);font-weight:bold;">
+                        Book / Request page
+                    </a>.
+                </p>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <h3>Send a Message</h3>
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="organization">Institution / Organization</label>
+                    <input type="text" id="organization"
+                           placeholder="Enter your institution">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" required>
+                        <option value="">Select enquiry subject</option>
+                        <option>General Enquiry</option>
+                        <option>Academic Enquiry</option>
+                        <option>Research Collaboration</option>
+                        <option>Consultancy</option>
+                        <option>Mentorship</option>
+                        <option>Training / Workshop</option>
+                        <option>Institutional Partnership</option>
+                        <option>Speaking Engagement</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="messageText">Your Message *</label>
+                    <textarea id="messageText"
+                              placeholder="Write your message here..."
+                              required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    Prepare Email Message →
+                </button>
+
+                <p class="form-note">
+                    Your email application will open with the message
+                    prepared. Review it and press Send to deliver it.
+                </p>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section class="section connect-section">
+    <div class="container">
+        <div class="connect-box">
+            <h2>Connect on Social Media</h2>
+            <p>
+                Follow professional updates and connect through
+                the available social platforms.
+            </p>
+
+            <div class="social-links">
+                <a href="https://wa.me/250784810644" target="_blank">
+                    WhatsApp
+                </a>
+
+                <a href="https://web.facebook.com/profile.php?id=100081601130015"
+                   target="_blank">
+                    Facebook
+                </a>
+
+                <a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+                   target="_blank">
+                    LinkedIn
+                </a>
+
+                <a href="mailto:twahirwajeanclaude1@gmail.com">
+                    Email
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <strong>DR. TWAHIRWA JEAN CLAUDE</strong>
+
+    <p>Academic | Researcher | Nursing Educator | Professional Collaborator</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html">Book / Request</a>
+    </div>
+
+    <p>
+        © <span id="year"></span> Dr. TWAHIRWA JEAN CLAUDE.
+        All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("show");
+
+    menuToggle.textContent =
+        navLinks.classList.contains("show") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* COPYRIGHT YEAR */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* CONTACT FORM */
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const organization = document.getElementById("organization").value.trim();
+    const subject = document.getElementById("subject").value;
+    const message = document.getElementById("messageText").value.trim();
+
+    if (!name || !email || !subject || !message) {
+        alert("Please complete all required fields.");
+        return;
+    }
+
+    const emailSubject = encodeURIComponent(
+        subject + " - " + name
+    );
+
+    const emailBody = encodeURIComponent(
+        "CONTACT ENQUIRY\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email Address: " + email + "\n" +
+        "Institution / Organization: " +
+        (organization || "Not provided") + "\n" +
+        "Subject: " + subject + "\n\n" +
+        "Message:\n" + message
+    );
+
+    const mailto =
+        "mailto:twahirwajeanclaude1@gmail.com" +
+        "?subject=" + emailSubject +
+        "&body=" + emailBody;
+
+    window.location.href = mailto;
+});
+</script>
+
+</body>
+</html>

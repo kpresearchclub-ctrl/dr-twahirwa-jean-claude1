@@ -1,0 +1,917 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Book a Meeting | Dr. TWAHIRWA JEAN CLAUDE</title>
+
+<style>
+:root {
+    --navy: #101b35;
+    --teal: #168d83;
+    --dark-teal: #08766e;
+    --sky: #e8f5f5;
+    --background: #f5faff;
+    --white: #ffffff;
+    --text: #344054;
+    --muted: #667085;
+    --border: #dce7ee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 15px rgba(16,27,53,0.08);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--navy);
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.logo span {
+    display: block;
+    color: var(--teal);
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--navy);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--teal);
+}
+
+.nav-links .booking-link {
+    background: var(--teal);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 27px;
+    color: var(--navy);
+    cursor: pointer;
+}
+
+.hero {
+    background: linear-gradient(120deg, var(--navy), var(--dark-teal));
+    color: white;
+    text-align: center;
+    padding: 80px 5%;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.eyebrow {
+    color: #a7e7df;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 48px);
+    margin: 12px 0;
+    line-height: 1.2;
+}
+
+.hero p {
+    color: #e2f3f1;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-actions {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-light {
+    background: white;
+    color: var(--navy);
+}
+
+.btn-outline {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.container {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section {
+    padding: 65px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading span {
+    color: var(--teal);
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 30px;
+    margin: 7px 0;
+}
+
+.section-heading p {
+    color: var(--muted);
+    max-width: 680px;
+    margin: auto;
+}
+
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: stretch;
+}
+
+.booking-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 22px rgba(16,27,53,0.05);
+}
+
+.card-icon {
+    width: 52px;
+    height: 52px;
+    background: var(--sky);
+    color: var(--dark-teal);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-bottom: 16px;
+}
+
+.booking-card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 23px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--navy);
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(22,141,131,0.1);
+}
+
+.form-group textarea {
+    min-height: 105px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--teal);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background: var(--dark-teal);
+}
+
+.form-note {
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.info-section {
+    background: var(--sky);
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background: white;
+    border-radius: 10px;
+    padding: 25px;
+    text-align: center;
+}
+
+.info-card h3 {
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.contact-strip {
+    background: var(--navy);
+    color: white;
+    padding: 55px 5%;
+    text-align: center;
+}
+
+.contact-strip h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.contact-strip p {
+    color: #cbd5e1;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    display: inline-block;
+    border: 1px solid #a7e7df;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.contact-links a:hover {
+    background: var(--teal);
+}
+
+footer {
+    background: #0a1328;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 30px 5%;
+}
+
+footer strong {
+    color: white;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 15px 0;
+    font-size: 13px;
+}
+
+.footer-links a:hover {
+    color: #a7e7df;
+}
+
+footer p {
+    font-size: 12px;
+}
+
+@media(max-width: 900px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 800px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 20px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 0;
+    }
+
+    .booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 500px) {
+    .hero {
+        padding: 60px 5%;
+    }
+
+    .section {
+        padding: 48px 0;
+    }
+
+    .booking-card {
+        padding: 22px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            DR. TWAHIRWA JEAN CLAUDE
+            <span></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation">☰</button>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="research.html">Research</a>
+            <a href="consultancy.html">Consultancy</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="booking.html" class="booking-link">Book / Request</a>
+        </div>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <span class="eyebrow">Appointments & Professional Engagement</span>
+
+        <h1>Book a Meeting or Submit a Request</h1>
+
+        <p>
+            Connect with Dr. TWAHIRWA JEAN CLAUDE for academic discussions,
+            research collaboration, consultancy, mentorship, training
+            and professional engagement.
+        </p>
+
+        <div class="hero-actions">
+            <a href="#booking" class="btn btn-light">Book a Meeting</a>
+            <a href="#request" class="btn btn-outline">Submit a Request</a>
+        </div>
+    </div>
+</section>
+
+<!-- BOOKING AND REQUEST FORMS -->
+<section class="section" id="booking">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>Get In Touch</span>
+            <h2>Choose How You Would Like to Connect</h2>
+            <p>
+                Select the appropriate form and provide the necessary
+                information to begin the engagement process.
+            </p>
+        </div>
+
+        <div class="booking-grid">
+
+            <!-- MEETING BOOKING -->
+            <div class="booking-card">
+                <div class="card-icon">📅</div>
+
+                <h3>Book a Meeting</h3>
+
+                <p class="card-description">
+                    Request an appointment for an academic discussion,
+                    consultation or professional meeting.
+                </p>
+
+                <form id="bookingForm">
+
+                    <div class="form-group">
+                        <label for="meetingName">Full Name *</label>
+                        <input type="text" id="meetingName"
+                               placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingEmail">Email Address *</label>
+                        <input type="email" id="meetingEmail"
+                               placeholder="Your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingOrganization">
+                            Institution / Organization
+                        </label>
+                        <input type="text" id="meetingOrganization"
+                               placeholder="Institution or organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingPurpose">Meeting Purpose *</label>
+                        <select id="meetingPurpose" required>
+                            <option value="">Select meeting purpose</option>
+                            <option>Academic Discussion</option>
+                            <option>Research Collaboration</option>
+                            <option>Consultancy</option>
+                            <option>Mentorship</option>
+                            <option>Training or Workshop</option>
+                            <option>Professional Networking</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingDate">Preferred Date *</label>
+                        <input type="date" id="meetingDate" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingTime">Preferred Time *</label>
+                        <select id="meetingTime" required>
+                            <option value="">Select preferred time</option>
+                            <option>08:00 - 09:00</option>
+                            <option>09:00 - 10:00</option>
+                            <option>10:00 - 11:00</option>
+                            <option>11:00 - 12:00</option>
+                            <option>12:00 - 13:00</option>
+                            <option>13:00 - 14:00</option>
+                            <option>14:00 - 15:00</option>
+                            <option>15:00 - 16:00</option>
+                            <option>16:00 - 17:00</option>
+                            <option>Other / Flexible</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingMode">Meeting Format *</label>
+                        <select id="meetingMode" required>
+                            <option value="">Choose meeting format</option>
+                            <option>Online Meeting</option>
+                            <option>In-Person Meeting</option>
+                            <option>Telephone Call</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="meetingDetails">Additional Details</label>
+                        <textarea id="meetingDetails"
+                                  placeholder="Briefly explain what you would like to discuss..."></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Send Meeting Request →
+                    </button>
+
+                    <p class="form-note">
+                        Your preferred date and time are requests only.
+                        The meeting is not confirmed until you receive
+                        a response.
+                    </p>
+                </form>
+            </div>
+
+            <!-- PROFESSIONAL REQUEST -->
+            <div class="booking-card" id="request">
+                <div class="card-icon">📩</div>
+
+                <h3>Submit a Professional Request</h3>
+
+                <p class="card-description">
+                    Send a request for consultancy, research support,
+                    mentorship, training or institutional collaboration.
+                </p>
+
+                <form id="requestForm">
+
+                    <div class="form-group">
+                        <label for="requestName">Full Name *</label>
+                        <input type="text" id="requestName"
+                               placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestEmail">Email Address *</label>
+                        <input type="email" id="requestEmail"
+                               placeholder="Your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestOrganization">
+                            Institution / Organization
+                        </label>
+                        <input type="text" id="requestOrganization"
+                               placeholder="Institution or organization">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestType">Request Category *</label>
+                        <select id="requestType" required>
+                            <option value="">Select request category</option>
+                            <option>Research Support</option>
+                            <option>Research Collaboration</option>
+                            <option>Consultancy Service</option>
+                            <option>Academic Mentorship</option>
+                            <option>Training and Capacity Building</option>
+                            <option>Guest Lecture / Speaking Engagement</option>
+                            <option>Institutional Partnership</option>
+                            <option>Other Request</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestDeadline">Expected Date / Deadline</label>
+                        <input type="date" id="requestDeadline">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestDetails">Describe Your Request *</label>
+                        <textarea id="requestDetails"
+                                  placeholder="Describe the project, support or collaboration you are requesting..."
+                                  required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="requestOutcome">Expected Outcome</label>
+                        <textarea id="requestOutcome"
+                                  placeholder="What would you like to achieve?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        Submit Professional Request →
+                    </button>
+
+                    <p class="form-note">
+                        Your request will be prepared as an email for
+                        review and sending.
+                    </p>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHAT HAPPENS NEXT -->
+<section class="section info-section">
+    <div class="container">
+
+        <div class="section-heading">
+            <span>After Submission</span>
+            <h2>What Happens Next?</h2>
+            <p>
+                A simple process for handling meeting requests
+                and professional enquiries.
+            </p>
+        </div>
+
+        <div class="info-grid">
+
+            <div class="info-card">
+                <h3>01. Submit</h3>
+                <p>
+                    Complete the appropriate form and send your
+                    information by email.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>02. Review</h3>
+                <p>
+                    Your enquiry can be reviewed to understand
+                    its purpose, requirements and availability.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>03. Confirmation</h3>
+                <p>
+                    You will need a response confirming whether
+                    the meeting or requested engagement can proceed.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- DIRECT CONTACT -->
+<section class="contact-strip">
+    <h2>Prefer Direct Communication?</h2>
+    <p>
+        You can also contact Dr. TWAHIRWA JEAN CLAUDE directly.
+    </p>
+
+    <div class="contact-links">
+        <a href="mailto:twahirwajeanclaude1@gmail.com">Send Email</a>
+
+        <a href="https://wa.me/250784810644" target="_blank">
+            WhatsApp
+        </a>
+
+        <a href="https://www.linkedin.com/in/twahirwa-jean-claude-ba32381a5/"
+           target="_blank">
+            LinkedIn
+        </a>
+
+        <a href="https://web.facebook.com/profile.php?id=100081601130015"
+           target="_blank">
+            Facebook
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <strong>DR. TWAHIRWA JEAN CLAUDE</strong>
+
+    <p>Academic | Researcher | Nursing Educator | Professional Collaborator</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="education.html">Education</a>
+        <a href="experience.html">Experience</a>
+        <a href="research.html">Research</a>
+        <a href="consultancy.html">Consultancy</a>
+        <a href="contact.html">Contact</a>
+        <a href="booking.html">Book / Request</a>
+    </div>
+
+    <p>
+        © <span id="year"></span> Dr. TWAHIRWA JEAN CLAUDE.
+        All Rights Reserved.
+    </p>
+</footer>
+
+<script>
+/* MOBILE NAVIGATION */
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
+
+menuToggle.addEventListener("click", function() {
+    navLinks.classList.toggle("show");
+
+    menuToggle.textContent =
+        navLinks.classList.contains("show") ? "×" : "☰";
+});
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", function() {
+        navLinks.classList.remove("show");
+        menuToggle.textContent = "☰";
+    });
+});
+
+/* COPYRIGHT YEAR */
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* SET MINIMUM DATE TO TODAY */
+const today = new Date();
+const localToday = new Date(
+    today.getTime() - today.getTimezoneOffset() * 60000
+).toISOString().split("T")[0];
+
+document.getElementById("meetingDate").min = localToday;
+document.getElementById("requestDeadline").min = localToday;
+
+/* EMAIL HELPER */
+function sendEmail(subject, body) {
+    const emailAddress = "twahirwajeanclaude1@gmail.com";
+
+    const mailto =
+        "mailto:" + emailAddress +
+        "?subject=" + encodeURIComponent(subject) +
+        "&body=" + encodeURIComponent(body);
+
+    window.location.href = mailto;
+}
+
+/* MEETING BOOKING FORM */
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("meetingName").value.trim();
+    const email = document.getElementById("meetingEmail").value.trim();
+    const organization = document.getElementById("meetingOrganization").value.trim();
+    const purpose = document.getElementById("meetingPurpose").value;
+    const date = document.getElementById("meetingDate").value;
+    const time = document.getElementById("meetingTime").value;
+    const mode = document.getElementById("meetingMode").value;
+    const details = document.getElementById("meetingDetails").value.trim();
+
+    if (!name || !email || !purpose || !date || !time || !mode) {
+        alert("Please complete all required meeting details.");
+        return;
+    }
+
+    if (date < localToday) {
+        alert("Please choose today or a future date.");
+        return;
+    }
+
+    const subject = "Meeting Request - " + name;
+
+    const body =
+        "MEETING REQUEST\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Institution / Organization: " + (organization || "Not provided") + "\n" +
+        "Meeting Purpose: " + purpose + "\n" +
+        "Preferred Date: " + date + "\n" +
+        "Preferred Time: " + time + "\n" +
+        "Meeting Format: " + mode + "\n\n" +
+        "Additional Details:\n" + (details || "None provided") + "\n\n" +
+        "Please review and confirm availability.";
+
+    sendEmail(subject, body);
+});
+
+/* PROFESSIONAL REQUEST FORM */
+document.getElementById("requestForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("requestName").value.trim();
+    const email = document.getElementById("requestEmail").value.trim();
+    const organization = document.getElementById("requestOrganization").value.trim();
+    const type = document.getElementById("requestType").value;
+    const deadline = document.getElementById("requestDeadline").value;
+    const details = document.getElementById("requestDetails").value.trim();
+    const outcome = document.getElementById("requestOutcome").value.trim();
+
+    if (!name || !email || !type || !details) {
+        alert("Please complete all required request details.");
+        return;
+    }
+
+    if (deadline && deadline < localToday) {
+        alert("Please select a future deadline or leave it blank.");
+        return;
+    }
+
+    const subject = "Professional Request - " + type;
+
+    const body =
+        "PROFESSIONAL REQUEST\n\n" +
+        "Full Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Institution / Organization: " + (organization || "Not provided") + "\n" +
+        "Request Category: " + type + "\n" +
+        "Expected Date / Deadline: " + (deadline || "Not specified") + "\n\n" +
+        "Request Details:\n" + details + "\n\n" +
+        "Expected Outcome:\n" + (outcome || "Not specified");
+
+    sendEmail(subject, body);
+});
+</script>
+
+</body>
+</html>
